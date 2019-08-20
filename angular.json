@@ -27,9 +27,16 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./src/assets/styles2/wayfinder.css",   
               "src/styles.scss"
+              
             ],
-            "scripts": []
+            "scripts": [
+              {
+                "input": "node_modules/document-register-element/build/document-register-element.js"
+              }
+            ]
           },
           "configurations": {
             "production": {
@@ -118,6 +125,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "microfrontends"
 }
