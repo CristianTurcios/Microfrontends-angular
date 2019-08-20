@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-course',
@@ -7,6 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CourseComponent implements OnInit {
   @Input() course: object;
+  @Output() goToClassroom: EventEmitter<any> = new EventEmitter();
+  @Output() courseMaterials: EventEmitter<any> = new EventEmitter();
+
 
   constructor() { }
 
@@ -14,4 +17,11 @@ export class CourseComponent implements OnInit {
     console.log('course 1', this.course);
   }
 
+  // goToClassroom() {
+  //   console.log('hello');
+  // }
+
+  // courseMaterials() {
+  //   console.log('hello 2');
+  // }
 }
