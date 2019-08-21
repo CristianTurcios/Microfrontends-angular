@@ -1,0 +1,148 @@
+{
+	"id": "reactivateaccount-form",
+	"cssClass": [
+		"form--profile",
+		"row"
+	],
+	"attributes": {
+		"name": "reactiveAccountForm",
+		"no-validate": ""
+	},
+	"tagName": "form",
+	"elements": [{
+		"tagName": "fieldset",
+		"cssClass": [
+			"col-12",
+			"col-md-6"
+		],
+		"elements": [{
+			"tagName": "ul",
+			"cssClass": [
+				"form__list",
+				"row"
+			],
+			"elements": [{
+					"tagName": "li",
+					"cssClass": [
+						"col-12"
+					],
+					"elements": [{
+							"type": "label",
+							"value": "Banner ID",
+							"cssClass": [],
+							"attributes": {
+								"for": "bannerId"
+							}
+						},
+						{
+							"type": "input",
+							"field": "text",
+							"value": "",
+							"attributes": {
+								"name": "bannerId",
+								"id": "bannerId",
+								"required": ""
+							}
+						}
+					]
+				},
+				{
+					"tagName": "li",
+					"cssClass": [
+						"col-12"
+					],
+					"elements": [{
+							"type": "label",
+							"value": "First Name",
+							"attributes": {
+								"for": "firstName"
+							}
+						},
+						{
+							"type": "input",
+							"field": "text",
+							"value": "",
+							"attributes": {
+								"name": "firstName",
+								"id": "firstName",
+								"required": ""
+							}
+						}
+					]
+				},
+				{
+					"tagName": "li",
+					"cssClass": [
+						"col-12"
+					],
+					"elements": [{
+							"type": "label",
+							"value": "Last Name",
+							"attributes": {
+								"for": "lastName"
+							}
+						},
+						{
+							"type": "input",
+							"field": "text",
+							"value": "",
+							"attributes": {
+								"name": "lastName",
+								"id": "lastName",
+								"required": ""
+							}
+						}
+					]
+				},
+				{
+					"tagName": "li",
+					"cssClass": [
+						"col-12"
+					],
+					"elements": [{
+							"type": "label",
+							"value": "Personal Email",
+							"attributes": {
+								"for": "personalEmail"
+							}
+						},
+						{
+							"type": "input",
+							"field": "text",
+							"value": "",
+							"attributes": {
+								"name": "personalEmail",
+								"id": "personalEmail",
+								"required": ""
+							}
+						}
+					]
+				},
+				{
+					"tagName": "li",
+					"cssClass": [
+						"col-12"
+					],
+					"elements": [{
+							"type": "label",
+							"value": "Email",
+							"attributes": {
+								"for": "email"
+							}
+						},
+						{
+							"type": "input",
+							"field": "text",
+							"value": "",
+							"attributes": {
+								"name": "email",
+								"id": "email",
+								"required": ""
+							}
+						}
+					]
+				}
+			]
+		}]
+	}]
+}

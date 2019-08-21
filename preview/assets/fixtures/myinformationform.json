@@ -1,0 +1,581 @@
+{
+  "id": "myinformation-form",
+  "cssClass": [
+    "form--profile",
+    "row"
+  ],
+  "tagName": "form",
+  "attributes": {
+      "name": "$ctrl.external.form",
+      "id": "information-form"
+  },
+  "elements": [
+    {
+      "tagName": "fieldset",
+      "cssClass": ["col-12", "col-md-6"],
+      "elements": [
+        {
+            "tagName": "ul",
+            "cssClass": ["form__list", "row"],
+            "elements": [
+                {
+                    "tagName":"li",
+                    "cssClass": ["col-12"],
+                    "elements":
+                    [
+                        {
+                            "type": "label",
+                            "value": "Street Adress",
+                            "cssClass": [],
+                            "attributes":{
+                                "for": "address-line1"
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "field": "text",
+                            "value": "1305 E Jefferson Streefdafadsfadsfasdt",
+                            "prepopulated": ["address-line1"],
+                            "attributes": {
+                                "name": "address-line1",
+                                "id": "address-line1",
+                                "required": true
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "field": "text",
+                            "value": "Apt 606",
+                            "prepopulated": ["address-line2"],
+                            "attributes": {
+                                "name": "address-line2",
+                                "id": "address-line2"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "tagName":"li",
+                    "cssClass": ["col-12"],
+                    "elements":
+                    [
+                        {
+                            "type": "label",
+                            "value": "Country",
+                            "attributes":{
+                                "for": "country"
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "field": "text",
+                            "value": "United States",
+                            "prepopulated": ["country"],
+                            "attributes": {
+                                "name": "country",
+                                "id": "country"
+                            }
+                        }
+                    ]
+                },{
+                    "tagName":"li",
+                    "cssClass": ["col-12"],
+                    "elements":
+                    [
+                        {
+                            "type": "label",
+                            "value": "City",
+                            "attributes":{
+                                "for": "city"
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "field": "text",
+                            "value": "United States",
+                            "prepopulated": ["city"],
+                            "attributes": {
+                                "name": "city",
+                                "id": "city"
+                            }
+                        }
+                    ]
+                },{
+                    "tagName":"li",
+                    "cssClass": ["col-4"],
+                    "elements":
+                    [
+                        {
+                            "type": "label",
+                            "value": "State",
+                            "attributes":{
+                                "for": "state"
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "field": "text",
+                            "value": "MD",
+                            "prepopulated": ["state"],
+                            "attributes": {
+                                "name": "state",
+                                "id": "state"
+                            }
+                        }
+                    ]
+                },{
+                    "tagName":"li",
+                    "cssClass": ["col-8"],
+                    "elements":
+                    [
+                        {
+                            "type": "label",
+                            "value": "Zip Code",
+                            "attributes":{
+                                "for": "zipcode"
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "field": "text",
+                            "value": "21022",
+                            "prepopulated": ["zipcode"],
+                            "attributes": {
+                                "name": "zipcode",
+                                "id": "zipcode"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },{
+            "cssClass": ["form__extra-options"],
+            "elements": [
+                {
+                    "cssClass": ["input--check"],
+                    "elements": [{
+                        "cssClass":["input--check"],
+                        "type": "input",
+                        "field": "checkbox",
+                        "prepopulated": ["has_billing_address"],
+                        "attributes":{
+                            "id": "billing-address",
+                            "name": "has_billing_address"
+                        }
+                    },{
+                    "type":"label",
+                    "value": "My billing address is different",
+                    "attributes":{
+                        "for": "billing-address"
+                    }
+                }]
+                },{
+                    "cssClass":["form__list", "row"],
+                    "tagName":"ul",
+                    "attributes":{
+                        "ng-class":"{'is-hidden': !$ctrl.external.has_billing_address}"
+                    },
+                    "elements":[
+                        {
+                            "tagName":"li",
+                            "cssClass": ["col-12"],
+                            "elements":[
+                                {
+                                    "type":"label",
+                                    "value":"Street Address",
+                                    "attributes":{
+                                        "for":"billing-address-line1"
+                                    }
+                                },
+                                {
+                                    "type":"input",
+                                    "field":"text",
+                                    "prepopulated": ["billing-address-line1"],
+                                    "attributes":{
+                                        "name":"billing-address-line1",
+                                        "id": "billing-address-line1",
+                                        "placeholder": "Billing Address"
+                                    }
+                                },
+                                {
+                                    "type":"input",
+                                    "field":"text",
+                                    "prepopulated": ["billing-address-line2"],
+                                    "attributes":{
+                                        "name":"billing-address-line2",
+                                        "id": "billing-address-line2",
+                                        "placeholder": "Billing Address line 2"
+                                    }
+                                }
+                            ]
+                        },{
+                            "tagName":"li",
+                            "cssClass": ["col-12"],
+                            "elements":[
+                                {
+                                    "type":"label",
+                                    "value":"Country",
+                                    "attributes":{
+                                        "for":"billing-address-country"
+                                    }
+                                },
+                                {
+                                    "type":"input",
+                                    "field":"text",
+                                    "prepopulated": ["billing-address-country"],
+                                    "attributes":{
+                                        "name":"billing-address-country",
+                                        "id": "billing-address-country",
+                                        "placeholder": "Country"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "tagName":"li",
+                            "cssClass": ["col-12"],
+                            "elements":[
+                                {
+                                    "type":"label",
+                                    "value":"City",
+                                    "attributes":{
+                                        "for":"billing-address-city"
+                                    }
+                                },
+                                {
+                                    "type":"input",
+                                    "field":"text",
+                                    "prepopulated": ["billing-address-city"],
+                                    "attributes":{
+                                        "name":"billing-address-city",
+                                        "id": "billing-address-city",
+                                        "placeholder": "City"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "tagName":"li",
+                            "cssClass": ["col-4"],
+                            "elements":[
+                                {
+                                    "type":"label",
+                                    "value":"State",
+                                    "attributes":{
+                                        "for":"billing-address-state"
+                                    }
+                                },
+                                {
+                                    "type":"input",
+                                    "field":"text",
+                                    "prepopulated": ["billing-address-state"],
+                                    "attributes":{
+                                        "name":"billing-address-state",
+                                        "id": "billing-address-state",
+                                        "placeholder": "State"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "tagName":"li",
+                            "cssClass": ["col-4"],
+                            "elements":[
+                                {
+                                    "type":"label",
+                                    "value":"Zip Code",
+                                    "attributes":{
+                                        "for":"billing-address-zipcode"
+                                    }
+                                },
+                                {
+                                    "type":"input",
+                                    "field":"text",
+                                    "prepopulated": ["billing-address-zipcode"],
+                                    "attributes":{
+                                        "name":"billing-address-zipcode",
+                                        "id": "billing-address-zipcode",
+                                        "placeholder": "Zip Code"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },{
+            "cssClass": ["form__extra-options"],
+            "elements": [
+                {
+                    "cssClass": ["input--check"],
+                    "elements": [{
+                        "cssClass":["input--check"],
+                        "type": "input",
+                        "field": "checkbox",
+                        "prepopulated": ["has_shipping_address"],
+                        "attributes":{
+                            "id": "shipping-address",
+                            "name": "has_shipping_address"
+                        }
+                    },{
+                    "type":"label",
+                    "value": "My billing address is different",
+                    "attributes":{
+                        "for": "shipping-address"
+                    }
+                }]
+                },
+                {
+                    "cssClass":["form__list", "row"],
+                    "tagName":"ul",
+                    "attributes":{
+                        "ng-class":"{'is-hidden': !$ctrl.external.has_shipping_address}"
+                    },
+                    "elements":[
+                        {
+                            "tagName":"li",
+                            "cssClass": ["col-12"],
+                            "elements":[
+                                {
+                                    "type":"label",
+                                    "value":"Street Address",
+                                    "attributes":{
+                                        "for":"shipping-address-line1"
+                                    }
+                                },
+                                {
+                                    "type":"input",
+                                    "field":"text",
+                                    "prepopulated": ["shipping-address-line1"],
+                                    "attributes":{
+                                        "name":"shipping-address-line1",
+                                        "id": "shipping-address-line1",
+                                        "placeholder": "Billing Address"
+                                    }
+                                },
+                                {
+                                    "type":"input",
+                                    "field":"text",
+                                    "prepopulated": ["shipping-address-line2"],
+                                    "attributes":{
+                                        "name":"shipping-address-line2",
+                                        "id": "shipping-address-line2",
+                                        "placeholder": "Shipping Address line 2"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "tagName":"li",
+                            "cssClass": ["col-12"],
+                            "elements":[
+                                {
+                                    "type":"label",
+                                    "value":"Country",
+                                    "attributes":{
+                                        "for":"shipping-address-country"
+                                    }
+                                },
+                                {
+                                    "type":"input",
+                                    "field":"text",
+                                    "prepopulated": ["shipping-address-country"],
+                                    "attributes":{
+                                        "name":"shipping-address-country",
+                                        "id": "shipping-address-country",
+                                        "placeholder": "Country"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "tagName":"li",
+                            "cssClass": ["col-12"],
+                            "elements":[
+                                {
+                                    "type":"label",
+                                    "value":"City",
+                                    "attributes":{
+                                        "for":"shipping-address-city"
+                                    }
+                                },
+                                {
+                                    "type":"input",
+                                    "field":"text",
+                                    "prepopulated": ["shipping-address-city"],
+                                    "attributes":{
+                                        "name":"shipping-address-city",
+                                        "id": "shipping-address-city",
+                                        "placeholder": "City"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "tagName":"li",
+                            "cssClass": ["col-4"],
+                            "elements":[
+                                {
+                                    "type":"label",
+                                    "value":"State",
+                                    "attributes":{
+                                        "for":"shipping-address-state"
+                                    }
+                                },
+                                {
+                                    "type":"input",
+                                    "field":"text",
+                                    "prepopulated": ["shipping-address-state"],
+                                    "attributes":{
+                                        "name":"shipping-address-state",
+                                        "id": "shipping-address-state",
+                                        "placeholder": "State"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "tagName":"li",
+                            "cssClass": ["col-4"],
+                            "elements":[
+                                {
+                                    "type":"label",
+                                    "value":"Zip Code",
+                                    "attributes":{
+                                        "for":"shipping-address-zipcode"
+                                    }
+                                },
+                                {
+                                    "type":"input",
+                                    "field":"text",
+                                    "prepopulated": ["shipping-address-zipcode"],
+                                    "attributes":{
+                                        "name":"shipping-address-zipcode",
+                                        "id": "shipping-address-zipcode",
+                                        "placeholder": "Zip Code"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+
+      ]
+    },{
+      "tagName": "fieldset",
+      "cssClass": ["col-12", "col-md-6"],
+      "elements": [
+        {
+            "tagName": "ul",
+            "cssClass": ["form__list", "row"],
+            "elements": [
+                {
+                    "tagName":"li",
+                    "cssClass": ["col-12"],
+                    "elements":
+                    [
+                        {
+                            "type": "label",
+                            "value": "Email",
+                            "attributes":{
+                                "for": "email"
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "field": "email",
+                            "value": "john.doe@gmail.com",
+                            "prepopulated": ["email"],
+                            "attributes": {
+                                "name": "email",
+                                "id": "email"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "tagName":"li",
+                    "cssClass": ["col-12"],
+                    "elements":
+                    [
+                        {
+                            "type": "label",
+                            "value": "Mobile Phone",
+                            "attributes":{
+                                "for": "mobile-phone"
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "field": "tel",
+                            "prepopulated": ["mobile-phone"],
+                            "attributes": {
+                                "name": "mobile-phone",
+                                "id": "mobile-phone",
+                                "placeholder": "999999999"
+                            }
+                        }
+                    ]
+                },{
+                    "tagName":"li",
+                    "cssClass": ["col-12"],
+                    "elements":
+                    [
+                        {
+                            "type": "label",
+                            "value": "Home Phone",
+                            "attributes":{
+                                "for": "home-phone"
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "field": "tel",
+                            "prepopulated": ["home-phone"],
+                            "attributes": {
+                                "name": "home-phone",
+                                "id": "home-phone",
+                                "placeholder": "222222222"
+                            }
+                        }
+                    ]
+                },{
+                    "tagName":"li",
+                    "cssClass": ["col-4"],
+                    "elements":
+                    [
+                        {
+                            "type": "label",
+                            "value": "Website (optional)",
+                            "attributes":{
+                                "for": "website"
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "field": "text",
+                            "value": "www.john.doe",
+                            "prepopulated": ["website"],
+                            "attributes": {
+                                "name": "website",
+                                "id": "website"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }, {
+            "type": "div",
+            "cssClass": ["alert", "alert--third", "form__alert", "form__item--bottom"],
+            "value": "Your information is pending verification.",
+            "attributes": {
+                "ng-if": "$ctrl.externaldata.profileMetadata.address_validation == 'pending'"
+            },
+            "elements": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+    "data": [
+        {
+            "key": "COUN - 6316 - 2",
+            "name": "Techniques of Counseling",
+            "instructor": "Leah Jones",
+            "credits": "5 Credit Hours",
+            "startDate": "2016-05-31T00:00:00",
+            "endDate": "2016-08-14T00:00:00",
+            "currentWeek": 2,
+            "assignments": 3,
+            "announcements": 12
+        },
+        {
+            "key": "COUN - 7654 - 3",
+            "name": "Design Thinking",
+            "instructor": "John Doe",
+            "credits": "20 Credit Hours",
+            "startDate": "2016-02-17T00:00:00",
+            "endDate": "2016-07-20T00:00:00",
+            "currentWeek": 5,
+            "assignments": 1,
+            "announcements": 30
+        },
+        {
+            "key": "COUN - 7654 - 3",
+            "name": "Design Thinking",
+            "instructor": "John Doe",
+            "credits": "20 Credit Hours",
+            "startDate": "2016-02-17T00:00:00",
+            "endDate": "2016-07-20T00:00:00",
+            "currentWeek": 5,
+            "assignments": 1,
+            "announcements": 30
+        }
+    ]
+}

@@ -1,7 +1,9 @@
 import { storiesOf, moduleMetadata } from '@storybook/angular';
 import { action } from '@storybook/addon-actions';
+import { withKnobs, object, text, select  } from '@storybook/addon-knobs/react';
 import { CourseComponent } from '../app/course/course.component';
-
+import { Button } from '@storybook/angular/demo';
+import { withA11y } from '@storybook/addon-a11y';
 
 export const courseInformation = {
     term: {
@@ -76,19 +78,30 @@ export const courseInformation = {
 export const actions = {
     goToClassroom: action('goToClassroom'),
     courseMaterials: action('courseMaterials'),
-  };
+};
+
+const label = 'Portal';
+const options = {
+  Walden: 'walden',
+  UoL: 'uol'
+};
+
+const defaultValue = 'unified';
+const groupId = 'GROUP-ID1';
 
 storiesOf('Course Card', module)
-    .addDecorator(
-        moduleMetadata({
-            // imports: [MyExampleModule],
-            // providers: [MyExampleService]
-        }),
-    )
+    // .addDecorator(
+    //     moduleMetadata({
+    //         // imports: [MyExampleModule],
+    //         // providers: [MyExampleService]
+    //     }),
+    // )
+    .addDecorator(withKnobs)
+    .addDecorator(withA11y)
     .add('Simple Course Card', () => ({
         component: CourseComponent,
         props: {
-            course: courseInformation,
+            course: object('Course information', courseInformation),
             goToClassroom: actions.goToClassroom,
             courseMaterials: actions.courseMaterials,
         }
@@ -96,4 +109,10 @@ storiesOf('Course Card', module)
     {
         notes: `# Component A
         Some text to go here.`,
-    });
+    })
+    .add('with a button', () => ({
+        component: Button,
+        props: {
+         text: select(label, options, defaultValue, groupId),
+        },
+      }));

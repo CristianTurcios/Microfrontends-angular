@@ -1,0 +1,5330 @@
+@charset "UTF-8";
+/* Base
+**********************/
+/* Fonts Weights
+**********************/
+/* Fonts Families
+********************,**/
+/*$Gibson: "Gibson",Helvetica, Arial, sans-serif;*/
+/* Z-Index
+**********************/
+/* Colors
+**********************/
+/* Adjust Font Size to Rem
+**********************/
+/* Clearfix
+**********************/
+/* Media Queries Mixin
+**********************/
+/*
+Project: Laureate Global Framework
+Authors: Wendy Vargas, Wilson Sánchez
+Description: CSS and SASS code for all the modules of the Global Framework, including Search, Passport, Recommendations and Connections.
+Version: 1.0
+**********************/
+/* Global Properties for the Project
+**********************/
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #FFFFFF;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+/* Base
+**********************/
+/*  Board Global
+**********************/
+.board-with-sidebar {
+  height: 100vh;
+}
+
+.board-with-sidebar .row {
+  height: auto;
+}
+
+@media only screen and (min-width: 992px) {
+  .board-with-sidebar .row {
+    height: 100%;
+  }
+}
+
+.board--full-height {
+  height: 100%;
+  position: relative;
+}
+
+/* Onboarding Boards
+**********************/
+.board--passport-onboard {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("../../assets/images/passport/bg-passport-onboard.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #CC3E1F;
+}
+
+.board-onboard-content {
+  position: relative;
+  padding: 30px;
+  background-color: #EEF2F3;
+}
+
+@media only screen and (min-width: 992px) {
+  .board-onboard-content {
+    height: 100%;
+  }
+}
+
+.board-onboard-content .block-interests-list {
+  padding: 3% 5%;
+}
+
+.onboard-content--linkedin-migration {
+  padding: 3%;
+  background-color: #FFFFFF;
+}
+
+@media only screen and (min-width: 992px) {
+  .onboard-content--passport-profile {
+    padding: 0;
+  }
+}
+
+/* Profile Boards
+**********************/
+.board-with-sidebar.board-with-sidebar--profile {
+  background-color: #EEEFF1;
+}
+
+@media only screen and (min-width: 992px) {
+  .board-with-sidebar.board-with-sidebar--profile {
+    background-color: #171516;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .board-with-sidebar.board-with-sidebar--profile {
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .board-with-sidebar.board-with-sidebar--profile {
+    min-height: 1300px;
+  }
+}
+
+@media only screen and (min-width: 1780px) {
+  .board-with-sidebar.board-with-sidebar--profile {
+    min-height: 1320px;
+  }
+}
+
+.board-profile {
+  padding: 30px;
+  background-color: #EEEFF1;
+}
+
+@media only screen and (min-width: 768px) {
+  .board-profile {
+    min-height: 100%;
+    padding: 50px 75px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .board-profile {
+    min-height: 1320px;
+  }
+}
+
+.board-profile > .row {
+  height: auto;
+}
+
+.board-passport__title,
+.board-experience__title {
+  margin: 10px 0 30px;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #545D60;
+}
+
+.board-passport-section__description {
+  color: #5f5f5f;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.board-passport-connections__count {
+  margin: -20px 0 20px;
+  font-weight: 400;
+  color: #666666;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+.board-passport-connections__count strong {
+  color: #D14946;
+}
+
+.onboard-content--passport-privacy {
+  background-color: #FFFFFF;
+}
+
+/* Privacy Board
+**********************/
+.onboard-content--passport-privacy {
+  background: url("../../assets/images/passport/bg-privacy-settings.png") white no-repeat top center;
+  background-position: center 60px;
+}
+
+/* Onboarding Blocks
+**********************/
+.block--linkedin-connection {
+  padding: 20px 30px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 992px) {
+  .block--linkedin-connection {
+    height: 40%;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #CCCCCC;
+  }
+}
+
+@media only screen and (min-width: 1780px) {
+  .block--linkedin-connection {
+    padding-top: 3%;
+  }
+}
+
+.block--linkedin-connection img {
+  width: 250px;
+  height: 100px;
+}
+
+@media only screen and (min-width: 1480px) {
+  .block--linkedin-connection img {
+    margin: 10px 0;
+  }
+}
+
+.block--linkedin-connection h2 {
+  margin-top: 10px;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #0079BB;
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+
+@media only screen and (min-width: 1480px) {
+  .block--linkedin-connection h2 {
+    margin-top: 20px;
+    font-size: 40px;
+    font-size: 2.5rem;
+  }
+}
+
+.block--linkedin-connection h3 {
+  margin: 5px 0;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #666666;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+@media only screen and (min-width: 1480px) {
+  .block--linkedin-connection h3 {
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
+}
+
+.block--linkedin-connection span {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #666666;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 1480px) {
+  .block--linkedin-connection span {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
+
+.block--passport-profile-details {
+  padding: 30px;
+}
+
+@media only screen and (min-width: 992px) {
+  .block--passport-profile-details {
+    height: 45%;
+    padding: 50px 30px;
+  }
+}
+
+.block--passport-profile-details .row {
+  margin: 0;
+}
+
+.block--passport-profile-details textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 30px;
+  font-weight: 400;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  border: none;
+  background-color: #FFFFFF;
+  box-shadow: 3px 3px 0px 1px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+@media only screen and (min-width: 1480px) {
+  .block--passport-profile-details textarea {
+    height: 300px;
+  }
+}
+
+.block--passport-profile-details img {
+  display: block;
+}
+
+.block--passport-profile-details span {
+  margin-top: 30px;
+  display: block;
+  color: #999999;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.block--passport-profile-details h2 {
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #007AB8;
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+
+.block--passport-profile-details h3 {
+  margin: 5px 0;
+  color: #666666;
+  font-weight: 300;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+.onboard-button-upload {
+  width: 160px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.onboard-button-upload__container {
+  width: 150px;
+  height: 150px;
+  margin: 15px auto;
+  position: relative;
+  border-radius: 150px 150px;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 0 1px 0px #FFFFFF inset, 0 0 1px 0px #FFFFFF;
+  background-color: #DDDDDD;
+  overflow: hidden;
+}
+
+.onboard-button-upload__container:hover::before {
+  content: '\e99a';
+  width: 60px;
+  height: 60px;
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  color: #FFFFFF;
+  opacity: 0.4;
+  font-family: raichu, sans-serif;
+  font-size: 60px;
+  font-size: 3.75rem;
+  z-index: 200;
+}
+
+.onboard-button-upload__container:hover::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  background: #007AB8;
+}
+
+.onboard-button-upload-pic {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Passport Step 2 - LinkedIn check
+**********************/
+.linkedin-migration__header {
+  margin-bottom: 30px;
+}
+
+.linkedin-migration__header i {
+  margin: 0 20px 20px 0;
+  padding: 7px;
+  float: left;
+  color: #FFFFFF;
+  background-color: #007AB8;
+  border-radius: 5px;
+  vertical-align: top;
+  font-size: 40px;
+  font-size: 2.5rem;
+}
+
+.linkedin-migration__header h2 {
+  padding-top: 6px;
+  color: #007AB8;
+  text-transform: uppercase;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+.linkedin-migration__header span {
+  color: #666666;
+  font-weight: 400;
+}
+
+.linkedin-migration__elements {
+  padding: 0;
+  color: #666666;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  border: 1px solid #DEE4E5;
+  border-radius: 5px;
+}
+
+.linkedin-migration__elements .col-xs-12 {
+  padding: 20px 6%;
+  border-bottom: 1px solid #DEE4E5;
+}
+
+.linkedin-migration__elements .row {
+  height: auto;
+  min-height: 40px;
+}
+
+.linkedin-migration__elements h4 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  font-size: 0.9375rem;
+}
+
+.linkedin-migration__elements p {
+  margin: 0;
+  font-weight: 300;
+}
+
+.linkedin-migration__elements img {
+  width: 60px;
+  height: 60px;
+  float: left;
+  border-radius: 100px;
+}
+
+.linkedin-migration__elements span {
+  margin-left: 10px;
+  padding-top: 10px;
+  display: block;
+  float: left;
+}
+
+.linkedin-migration__elements .form-checkbox[type="checkbox"]:not(:checked) + label, .linkedin-migration__elements .form-checkbox[type="checkbox"]:checked + label {
+  margin-left: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .linkedin-migration__elements .form-checkbox[type="checkbox"]:not(:checked) + label, .linkedin-migration__elements .form-checkbox[type="checkbox"]:checked + label {
+    margin-left: 0;
+  }
+}
+
+.linkedin-migration__elements .col-xs-12:last-child {
+  border-bottom: 0;
+}
+
+.linkedin-migration__details {
+  height: 75%;
+  padding: 30px 3%;
+  overflow: auto;
+  background-color: #FAFAFA;
+  border: 1px solid #DEE4E5;
+  clear: both;
+}
+
+.linkedin-migration__details h3 {
+  color: #666666;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.linkedin-migration__details span {
+  margin-top: 4px;
+  margin-bottom: 20px;
+  display: block;
+  color: #666666;
+}
+
+/* Experience & Interests Block in Overview
+**********************/
+.block-profile-summary {
+  min-height: 280px;
+  background-color: #FFFFFF;
+}
+
+@media only screen and (min-width: 768px) {
+  .block-profile-summary {
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .block-profile-summary {
+    height: 280px;
+  }
+}
+
+.block-profile-summary__edit {
+  display: inline;
+}
+
+/* Connections in Overview
+**********************/
+.block-profile-connections {
+  min-height: 328px;
+  margin-bottom: 40px;
+  background-color: #FFFFFF;
+}
+
+.block-profile-connections img {
+  width: 58px;
+  height: 58px;
+  border-radius: 5em;
+}
+
+@media only screen and (min-width: 768px) {
+  .block-profile-connections img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .block-profile-connections img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .block-profile-connections img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .block-profile-connections img {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+.card-connections-add__option {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto;
+  background-color: #FAFAFA;
+  border: 2px dotted #CCCCCC;
+  border-radius: 5em;
+}
+
+.card-connections-add__option:hover {
+  color: #FFFFFF;
+  background-color: #EFEFEF;
+}
+
+@media only screen and (min-width: 768px) {
+  .card-connections-add__option {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .card-connections-add__option {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .card-connections-add__option {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .card-connections-add__option {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+.card-connections-add__option i {
+  padding-top: 4px;
+  color: #CCCCCC;
+}
+
+@media only screen and (min-width: 768px) {
+  .card-connections-add__option i {
+    padding-top: 2px;
+    font-size: 40px;
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .card-connections-add__option i {
+    padding-top: 4px;
+    font-size: 50px;
+    font-size: 3.125rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .card-connections-add__option i {
+    padding-top: 2px;
+    font-size: 40px;
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .card-connections-add__option i {
+    padding-top: 8px;
+    font-size: 50px;
+    font-size: 3.125rem;
+  }
+}
+
+.block-profile-experience {
+  min-height: 330px;
+  margin-bottom: 40px;
+  background-color: #FFFFFF;
+}
+
+.block-profile-interests {
+  margin-bottom: 40px;
+  background-color: #FFFFFF;
+}
+
+.block-profile-interests .nav-interactive-bubles-menu a {
+  float: left;
+  border: 1px solid #ccc;
+  width: 100px;
+  height: 100px;
+  padding-top: 2px;
+}
+
+.block-profile-interests .nav-interactive-bubles-menu a i {
+  font-size: 3rem;
+}
+
+.block-profile-interests .nav-tags-menu a {
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 12px;
+  width: auto;
+  display: inline;
+  color: #ccc;
+  float: left;
+}
+
+/* Profile Blocks (shared styles)
+**********************/
+.block-profile__title {
+  margin: 1% 0;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  color: #333333;
+  font-size: 25px;
+  font-size: 1.5625rem;
+}
+
+.block-profile-summary,
+.block-profile-location,
+.block-profile-connections,
+.block-profile-experience,
+.block-profile-interests {
+  padding: 35px;
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 2px;
+}
+
+.block-profile-experience--education,
+.block-profile-experience--work,
+.block-profile-experience--language {
+  padding: 18px 14px;
+}
+
+.block-profile-experience--language h5 {
+  margin-left: 45px;
+}
+
+.block-profile-experience--education i,
+.block-profile-experience--work i,
+.block-profile-experience--language i {
+  margin-right: 15px;
+  margin-bottom: 25px;
+  float: left;
+  color: #DDDDDD;
+}
+
+.block-profile-experience--language i {
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+
+.block-profile-experience__item {
+  padding-left: 0;
+  color: #666666;
+}
+
+.block-profile-experience__item h4 {
+  margin: 0;
+  font-weight: 600;
+  color: #545D60;
+  font-size: 19px;
+  font-size: 1.1875rem;
+}
+
+.block-profile-experience__item h5 {
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding: 1% 0;
+  font-size: 17px;
+  font-size: 1.0625rem;
+}
+
+.block-experience__item-education {
+  background: url(../../assets/images/passport/bg-passport-education.png) no-repeat left center;
+}
+
+.block-experience__item-experience {
+  background: url(../../assets/images/passport/bg-passport-workexperience.png) no-repeat left center;
+}
+
+/* Passport Edit Block Option
+**********************/
+.block-profile__edit,
+.block-profile__manage {
+  font-weight: 700;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+.block-profile__edit i,
+.block-profile__manage i {
+  margin-right: 5px;
+  color: #CCCCCC;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+.block-profile-summary .block-profile__edit {
+  display: inline;
+  margin-right: 10px;
+}
+
+/* Passport About Me
+**********************/
+.block-profile-summary > p {
+  margin: 10px 0;
+  font-weight: 300;
+  overflow: auto;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .block-profile-summary > p {
+    height: 110px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .block-profile-summary > p {
+    height: 55%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .block-profile-summary > p {
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .block-profile-summary > p {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+}
+
+.block-profile-interests .nav-interactive-bubles-menu {
+  margin-top: 10px;
+}
+
+/* Location Block
+**********************/
+.block-profile-location {
+  height: 280px;
+  padding: 0;
+  overflow: hidden;
+  background: url("../../assets/images/passport/bg-dot-grid.png") repeat #1A1919;
+  background-color: #191818;
+  color: #FFFFFF;
+}
+
+.location-content {
+  width: 100%;
+  height: 100%;
+  background-color: #1A1919;
+  background-image: url("../../assets/images/passport/img-location-default.png");
+  background-repeat: no-repeat;
+  background-size: 360px 280px;
+  background-position: top center;
+}
+
+@media only screen and (min-width: 768px) {
+  .location-content {
+    background-image: url("../../assets/images/passport/img-location-default-tablet.png");
+    background-size: 220px 280px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .location-content {
+    background-image: url("../../assets/images/passport/img-location-default.png");
+    background-size: 100% auto;
+    background-position: 20% center;
+  }
+}
+
+@media only screen and (min-width: 1780px) {
+  .location-content {
+    background-size: 100% 360px;
+  }
+}
+
+.location-content i, .location-content span, .location-content h4, .location-content img {
+  display: none;
+}
+
+/* Passport Experience Tab
+**********************/
+.block-experience__item {
+  min-height: 300px;
+  margin-bottom: 40px;
+  padding: 55px 35px;
+  position: relative;
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 2px;
+  background-color: #FFFFFF;
+}
+
+.block-experience__item h3, .block-experience__item h4, .block-experience__item > h5 {
+  margin: 8px 0;
+}
+
+.block-experience__item h4 {
+  color: #838E8F;
+}
+
+@media only screen and (min-width: 768px) {
+  .block-experience__item {
+    height: 320px;
+    min-height: 1px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .block-experience__item {
+    height: 310px;
+  }
+}
+
+.block-experience__item h5 {
+  margin-top: 40px;
+}
+
+.block-experience__item h3 {
+  color: #545D60;
+  font-weight: 600;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+}
+
+.block-experience__item > h5,
+.block-experience__item > span {
+  color: #666666;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.block-experience-languages .block-experience__item {
+  position: relative;
+}
+
+@media only screen and (min-width: 992px) {
+  .block-experience-languages .block-experience__item {
+    min-height: 200px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .block-experience-languages .block-experience__item {
+    height: 210px;
+    min-height: 1px;
+  }
+}
+
+.block-experience-languages .block-item--edit-form {
+  height: auto;
+  min-height: 210px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .block-experience-languages .block-experience__item .icon-add-more-items {
+    margin-top: 30px;
+  }
+}
+
+.block-experience-languages .block-experience__item--add h3 {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+/*
+.block-experience__edit {
+  width: 100%;
+  display: block;
+  text-align: right;
+  i {
+  width: 40px;
+  height: 40px;
+  padding-top: 9px;
+  border-radius: 50px;
+  background-color: $red;
+  text-align: center;
+    color: $white;
+    @include font-size(20px);
+  }
+}
+*/
+.block-experience__edit {
+  width: 100%;
+  display: block;
+  text-align: right;
+  float: right;
+}
+
+.block-experience__edit i {
+  width: 40px;
+  height: 40px;
+  padding-top: 9px;
+  border-radius: 50px;
+  background-color: #D14946;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+.block-experience__edit-disabled i {
+  background-color: #CCCCCC;
+}
+
+.block-experience-languages .message-linkedin.message-linkedin-info {
+  height: auto;
+  top: 0;
+  z-index: 500;
+}
+
+/* Passport Experience Tab Add Items
+**********************/
+.block-experience__item--add {
+  padding: 0;
+  text-align: center;
+  background: transparent;
+  box-shadow: none;
+  border: 1px dashed #CCCCCC;
+}
+
+.block-experience__item--add a {
+  height: 100%;
+  padding: 0 10%;
+}
+
+.block-experience__item--add a > p {
+  color: #666666;
+  font-size: 15px;
+  font-size: 0.9375rem;
+}
+
+.icon-more.icon-add-more-items {
+  margin-top: 70px;
+  color: #CCCCCC;
+  font-size: 100px;
+  font-size: 6.25rem;
+}
+
+.block-experience__item--add.block-item--edit-form a {
+  padding: 8px 2%;
+  height: auto;
+}
+
+/* Passport Experience Tab Linkedin Items
+**********************/
+.tag-synched--linkedin {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.tag-synched--linkedin:before {
+  display: block;
+  z-index: 200;
+  position: absolute;
+  top: 1px;
+  left: 7px;
+  content: "\e981";
+  font-family: raichu, sans-serif;
+  color: #FFFFFF;
+  font-size: 23px;
+  font-size: 1.4375rem;
+}
+
+.tag-synched--linkedin:after {
+  width: 0;
+  height: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -500px;
+  border-bottom: 520px solid transparent;
+  border-left: 560px solid #007AB8;
+  z-index: 100;
+}
+
+.block-experience-linkedin__bubble {
+  width: 74px;
+  height: 74px;
+  margin: 70px auto 15px;
+  padding: 10px;
+  text-align: center;
+  background-color: #007AB8;
+  border-radius: 50px;
+}
+
+.block-experience-linkedin__bubble i {
+  color: #FFFFFF;
+  font-size: 34px;
+  font-size: 2.125rem;
+}
+
+.block-experience-linkedin__bubble ~ h3 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+.block-experience-linkedin__bubble i.icon-chain {
+  margin-top: -7px;
+  color: #6EA7CF;
+}
+
+.block-experience-languages .block-experience-linkedin__bubble {
+  margin-top: 20px;
+}
+
+.block-experience-sync {
+  text-align: right;
+}
+
+.sync-switch__titles {
+  min-width: 185px;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+  text-align: right;
+  color: #666666;
+}
+
+.sync-switch__titles > h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.sync-switch__titles > span {
+  font-weight: 300;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+/* Portfolio Blocks in Passport
+**********************/
+.block-portfolio {
+  width: 100%;
+  min-height: 300px;
+  margin: 20px 0 40px;
+  padding: 25px;
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 2px;
+  background-color: #FFFFFF;
+}
+
+.block-portfolio__content {
+  min-height: 250px;
+  padding: 35px 5%;
+  position: relative;
+  color: #FFFFFF;
+  background: url(../../assets/images/passport/bg-portfolio-cards.png) no-repeat top right;
+  background-size: 60%;
+}
+
+.block-portfolio-item__title {
+  margin-bottom: 15px;
+  display: inline-block;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  .block-portfolio-item__title {
+    display: block;
+  }
+}
+
+.block-portfolio__seemore:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.block-portfolio__seemore {
+  margin-top: 20px;
+  display: inline-block;
+  color: #FFFFFF;
+}
+
+@media only screen and (min-width: 1200px) {
+  .block-portfolio__seemore {
+    margin-top: 20px;
+  }
+}
+
+.block-portfolio__seemore i {
+  margin-left: 10px;
+  padding-top: 4px;
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+
+.block-portfolio-item__description {
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 992px) {
+  .block-portfolio-item__description {
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
+}
+
+.block-portolio__item--add {
+  height: auto;
+  text-align: center;
+}
+
+.block-portolio__item--add h3 {
+  color: #545D60;
+  font-weight: 600;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+}
+
+.block-portolio__item--add a {
+  height: 100%;
+}
+
+.block-portfolio .icon-add-more-items {
+  margin-top: 50px;
+}
+
+.block-portfolio__edit {
+  width: 40px;
+  display: block;
+  position: absolute;
+  right: 30px;
+  text-align: right;
+}
+
+.block-portfolio__edit i {
+  width: 40px;
+  height: 40px;
+  padding-top: 9px;
+  border-radius: 50px;
+  background-color: #333333;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+.block-portfolio-poweredby__subtitle {
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: #545D60;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.logo-portfolio-provider {
+  width: 200px;
+}
+
+/* Portfolio Block in Passport - Colors
+**********************/
+.block-portfolio:nth-child(1n+0) .block-portfolio__content {
+  background-color: #BF360C;
+}
+
+.block-portfolio:nth-child(2n+0) .block-portfolio__content {
+  background-color: #BAAE00;
+}
+
+.block-portfolio:nth-child(3n+0) .block-portfolio__content {
+  background-color: #4A90E2;
+}
+
+.block-portfolio:nth-child(4n+0) .block-portfolio__content {
+  background-color: #F5B62B;
+}
+
+/* Passport Experience Tab Edit Items
+**********************/
+.block-item--edit-form {
+  height: auto;
+  min-height: 310px;
+  padding: 15px 25px;
+  text-align: left;
+  background-color: #545D60;
+  border: none;
+}
+
+.block-item--edit-form label {
+  color: #FFFFFF;
+  font-weight: 400;
+}
+
+.form-item-has-dash:after {
+  content: '';
+  width: 8%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  right: -4%;
+  visibility: hidden;
+  background: #CCCCCC;
+}
+
+@media only screen and (min-width: 992px) {
+  .form-item-has-dash:after {
+    visibility: visible;
+  }
+}
+
+.edit-form__status-check {
+  text-align: left;
+}
+
+/* Passport Loaders
+**********************/
+.block-loader {
+  padding: 10% 0;
+}
+
+.block-experience__item.block-loader {
+  padding-top: 110px;
+}
+
+.block-experience-languages .block-loader {
+  padding-top: 70px;
+}
+
+.block-loader__title {
+  color: #666666;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Passport Interests List
+**********************/
+.block-passport-interests {
+  height: 90%;
+}
+
+.block-interests-list {
+  height: 90%;
+  margin: 10px auto;
+  overflow: auto;
+}
+
+.block-interests-list > li {
+  width: 98%;
+  height: 80px;
+  margin-left: 2%;
+  margin-bottom: 20px;
+  display: inline-block;
+  position: relative;
+  float: left;
+  background-color: #FFFFFF;
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 2px;
+}
+
+.block-interests-list > li:hover {
+  background-color: #FAFAFA;
+}
+
+.block-interests-list > li i {
+  margin: 0 3%;
+  display: inline-block;
+  color: #CCCCCC;
+  font-size: 40px;
+  font-size: 2.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .block-interests-list > li {
+    width: 46%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .block-interests-list > li {
+    height: 86px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .block-interests-list > li {
+    height: 80px;
+  }
+}
+
+.interests-parent__title {
+  width: 70%;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 600;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .interests-parent__title {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .interests-parent__title {
+    width: auto;
+  }
+}
+
+.block-interests-list__element {
+  padding: 18px 2%;
+  display: block;
+  vertical-align: middle;
+  color: #666666;
+}
+
+.block-interests-list > li.selected {
+  border: 3px solid #D14946;
+}
+
+.block-interests-list > li.selected a {
+  color: #D14946;
+}
+
+.block-interests-list > li.selected i {
+  color: #666666;
+}
+
+/* Bubble delete + bubble add
+**********************/
+.block-interests-list > li .bubble-delete,
+.block-interests-list > li .bubble-add,
+.block-interests-list > li .bubble-edit {
+  top: 22px;
+  right: 4%;
+  background: #D14946;
+}
+
+.block-interests-list > li .bubble-delete:hover,
+.block-interests-list > li .bubble-add:hover,
+.block-interests-list > li .bubble-edit:hover {
+  background: rgba(209, 73, 70, 0.2);
+}
+
+.block-interests-list > li .bubble-add {
+  top: 24px;
+  color: #CCCCCC;
+  border: 2px dotted #CCCCCC;
+  background: transparent;
+}
+
+.block-interests-list > li .bubble-add:hover {
+  background: rgba(204, 204, 204, 0.2);
+}
+
+.block-interests-list > li .bubble-edit i {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+.block-interests-list > li .bubble-edit:hover {
+  background: #bb350c;
+}
+
+.block-interests-list > li.selected .bubble-delete i,
+.block-interests-list > li.selected .bubble-add i,
+.block-interests-list > li.selected .bubble-edit i {
+  margin: 0;
+  color: #FFFFFF;
+}
+
+/* Styles for Passport Sub Interests Select
+**********************/
+.header-block-interests-list {
+  padding: 2%;
+  position: relative;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.header-block-interests-list i {
+  color: #CCCCCC;
+}
+
+.block-interests-select__title {
+  width: 90%;
+  color: #D14946;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+}
+
+@media only screen and (min-width: 768px) {
+  .block-interests-select__title {
+    padding-left: 20px;
+  }
+}
+
+.block-interests-select__subtitle {
+  margin: 7px 0;
+  color: #666666;
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 768px) {
+  .block-interests-select__subtitle {
+    padding-left: 20px;
+  }
+}
+
+.modal--small__close {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  color: #CCCCCC;
+}
+
+.modal--small__close > i:hover {
+  color: #D14946;
+}
+
+.footer-block-interests-list {
+  padding: 3%;
+  border-top: 1px solid #CCCCCC;
+}
+
+.row.block-interests-select__content {
+  height: auto;
+}
+
+.block-interests-select__content {
+  min-height: 300px;
+  margin: 0 auto;
+  padding: 20px 3%;
+  display: block;
+  position: relative;
+  top: 60px;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 2px;
+}
+
+@media only screen and (min-width: 768px) {
+  .block-interests-select__content {
+    width: 600px;
+    top: 75px;
+  }
+}
+
+.block-interests-select__list {
+  width: 90%;
+  height: 320px;
+  margin: 4% auto;
+  overflow: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .block-profile-interests .block-interests-list li {
+    width: 49%;
+    margin-left: 1%;
+  }
+}
+
+.block-profile-interests .block-interests-list__element {
+  height: 100%;
+  border: 2px solid #FAFAFA;
+}
+
+.block-profile-interests .block-interests-list__element:hover {
+  background: #FFFFFF;
+}
+
+.block-profile-interests .block-interests-list__element li a:hover {
+  background: #FAFAFA;
+}
+
+/* Styles for interest count in overview
+**********************/
+.block-interests__count {
+  margin-right: 6px;
+  float: left;
+  color: #666666;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+.block-profile__manage .interests-parent__title {
+  color: #DF4722;
+  text-decoration: underline;
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+
+.block-profile__manage .interests-parent__title:hover {
+  text-decoration: none;
+}
+
+/* Styles for Privacy Settings in Activation
+**********************/
+.block--privacy-selection {
+  z-index: 200;
+}
+
+.block--privacy-selection__header {
+  text-align: center;
+}
+
+.block--privacy-selection__header .block--privacy-selection__title {
+  margin: 20px;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.block--privacy-selection__header .block--privacy-selection__intro {
+  width: 60%;
+  margin: 20px auto;
+  color: #666666;
+  font-weight: 300;
+  text-align: center;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+@media only screen and (min-width: 1480px) {
+  .block--privacy-selection__header {
+    margin-top: 100px;
+  }
+}
+
+.block--privacy-selection__options {
+  margin: 0 auto;
+  padding: 3%;
+  background: #FFFFFF;
+  border: 1px solid #DBDBDB;
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.04);
+  z-index: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .block--privacy-selection__options {
+    width: 70%;
+    max-width: 600px;
+  }
+}
+
+.block--privacy-selection__options .block--privacy-selection__subtitle {
+  margin: 10px 0 25px;
+  color: #BF360C;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+.block--privacy-selection__options .selection-option__box__description {
+  margin: 20px 0;
+  color: #666666;
+  font-weight: 300;
+  text-align: center;
+  line-height: 28px;
+  font-size: 17px;
+  font-size: 1.0625rem;
+}
+
+.selection-option__box {
+  width: 130px;
+  margin: 0 auto;
+}
+
+.selection-option__box-option {
+  margin: 5px 0;
+  position: relative;
+  text-align: center;
+}
+
+.selection-option__box-option label {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-size: 1.375rem;
+}
+
+.selection-option__box-option input[type=radio]:checked ~ label {
+  color: #D14946;
+}
+
+.selection-option__box-option input[type="radio"]:not(:checked) + label:before {
+  border-color: #666666;
+  cursor: pointer;
+}
+
+.selection-option__box-option input[type="radio"]:checked + label:before {
+  top: 3px;
+  background-color: #D14946;
+}
+
+.selection-option__box-option input[type="radio"]:not(:checked) + label:before {
+  top: 3px;
+}
+
+.selection-option__box-option input[type="radio"]:checked + label:after {
+  top: 9px;
+}
+
+/* Styles for Privacy Message in Overview
+**********************/
+.block-profile-connections-privacy {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  padding: 0 10%;
+  text-align: center;
+}
+
+.block-profile-connections-privacy img {
+  width: 110px;
+  height: 110px;
+  margin-left: 12px;
+}
+
+.block-profile-connections-privacy__title {
+  margin: 20px 0;
+  color: #666666;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+.block-profile-connections-privacy__description {
+  font-weight: 300;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+.block-profile-connections-privacy--lg img {
+  width: 150px;
+  height: 150px;
+}
+
+.block-profile-connections-privacy--lg .block-profile-connections-privacy__title {
+  font-size: 32px;
+  font-size: 2rem;
+}
+
+.block-profile-connections-privacy--lg .block-profile-connections-privacy__description {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+.block-profile-connections-privacy__links {
+  margin: 20px 0;
+}
+
+/* Styles for Notifications in Passport
+**********************/
+.board-notifications__header {
+  margin-bottom: 20px;
+}
+
+.board-notifications__header .button {
+  margin-top: 13px;
+}
+
+@media only screen and (max-width: 768px) {
+  .board-notifications__header .button {
+    margin: 0 0 10px;
+  }
+  .board-notifications__header h2 {
+    font-size: 25px;
+    font-size: 1.5625rem;
+  }
+}
+
+.block-notifications__title {
+  margin: 10px 0;
+}
+
+.goback__arrow {
+  display: inline-block;
+  color: #666666;
+  transition: color .5s ease-in;
+}
+
+.goback__arrow i {
+  font-size: 70px;
+  font-size: 4.375rem;
+}
+
+.goback__arrow:hover {
+  color: #D14946;
+}
+
+.goback__arrow + .board-passport__title {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.block-notifications__settings {
+  padding: 20px;
+}
+
+.block-notifications {
+  padding: 30px 20px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.04);
+}
+
+.block-notifications p {
+  color: #838E8F;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.block-notifications__options {
+  border-top: 1px solid #DDDDDD;
+}
+
+.block-notifications__options:last-child {
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.block-notifications__options-option {
+  padding: 20px;
+}
+
+.block-notifications__options-check {
+  padding-top: 5px;
+  text-align: center;
+}
+
+.block-notifications-section {
+  padding-top: 5%;
+}
+
+@media only screen and (min-width: 768px) {
+  .block-notifications-section {
+    padding: 20px;
+  }
+}
+
+.block-notifications-section__title {
+  margin-bottom: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #545D60;
+}
+
+.block-notifications-section__optiontitle {
+  color: #838E8F;
+  text-align: center;
+}
+
+/* Activity (Notifications)
+**********************/
+.block-notifications--activity {
+  margin-top: 20px;
+  padding: 0;
+}
+
+.option-no-workxp > label {
+  margin-bottom: 20px;
+}
+
+/* Global Buttons
+**********************/
+.button {
+  height: auto;
+  width: auto;
+  display: block;
+  padding: 8px 2%;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+/* Button Sizes
+**********************/
+.button--s {
+  min-height: 30px;
+}
+
+.button--md {
+  min-height: 40px;
+}
+
+.button.button--l, .button--l {
+  min-height: 50px;
+  padding-top: 16px;
+  padding-bottom: 14px;
+}
+
+.button--xl {
+  min-height: 60px;
+  padding-top: 20px;
+  padding-bottom: 16px;
+}
+
+/* Button with Icon
+**********************/
+.button i, .button span {
+  vertical-align: middle;
+}
+
+.button i {
+  margin-right: 4px;
+  vertical-align: middle;
+  line-height: 21px;
+  font-size: 22px;
+  font-size: 1.375rem;
+}
+
+.button-primary {
+  color: #FFFFFF;
+  background-color: #F35908;
+}
+
+.button-primary:hover {
+  background-color: #ee5708;
+}
+
+.button--ghost {
+  color: #F35908;
+  border: 2px solid;
+  background-color: transparent;
+}
+
+.button--ghost:hover {
+  color: #FFFFFF;
+  background-color: #F35908;
+}
+
+.button-option-disabled {
+  padding-top: 10px;
+  color: #CCCCCC;
+  background: transparent;
+  border: 2px solid #CCCCCC;
+  cursor: not-allowed;
+}
+
+.button-option-disabled:hover {
+  color: #CCCCCC;
+  background: transparent;
+}
+
+/* Buttons with icons in Connections
+**********************/
+.ready {
+  border-color: #7ED321;
+  color: #7ED321;
+}
+
+.ready:hover {
+  background-color: #7ED321;
+  color: #FFFFFF;
+}
+
+.add {
+  border-color: #7ED321;
+  color: #7ED321;
+}
+
+.add:hover {
+  background-color: #7ED321;
+  color: #FFFFFF;
+}
+
+.less {
+  border-color: #D14946;
+  color: #D14946;
+}
+
+.less:hover {
+  background-color: #D14946;
+  color: #FFFFFF;
+}
+
+/* Buttons in Search Cards
+**********************/
+.card-search .button {
+  max-width: 250px;
+  margin: 20px auto;
+}
+
+/* Search Cards Buttons - Connections Extended Variation
+**********************/
+.card-search--extended-people .card__cover--extended .button {
+  width: 100%;
+  min-width: 42%;
+  max-width: none;
+  margin: 20px 4% 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .card-search--extended-people .card__cover--extended .button {
+    width: auto;
+    float: left;
+  }
+}
+
+.card__about .button-primary {
+  max-width: 260px;
+  height: 50px;
+  padding-top: 14px;
+}
+
+/* Onboarding Buttons
+**********************/
+.button--splash-screen {
+  width: 220px;
+  height: 50px;
+  padding-top: 14px;
+  margin: 20px auto;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  background-color: #CC3E1F;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+@media only screen and (min-width: 1480px) {
+  .button--splash-screen {
+    width: 250px;
+    font-size: 16px;
+    font-size: 1rem;
+  }
+}
+
+.button--linkedin-connection {
+  width: 220px;
+  height: 40px;
+  padding-top: 10px;
+  margin: 10px auto;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  background-color: #0079BB;
+}
+
+.button--linkedin-connection i {
+  margin-right: 5px;
+  vertical-align: top;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+.circle-button--linkedin-connection {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+  padding-top: 12px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #0079BB;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .circle-button--linkedin-connection {
+    position: absolute;
+    top: 38%;
+    left: 48%;
+  }
+}
+
+.button.button-linkedin-message {
+  width: auto;
+  padding-top: 10px;
+  margin-top: 5px;
+  margin-right: 20px;
+  float: left;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  border: 2px solid #FFFFFF;
+  background-color: transparent;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+.button.button-linkedin-message::after {
+  content: '';
+}
+
+.button.button-linkedin-message:hover {
+  background-color: #0076b6;
+}
+
+.button.button-linkedin {
+  height: auto;
+  margin-left: 10px;
+  display: inline-block;
+  color: #FFFFFF;
+  font-weight: 300;
+  text-transform: none;
+  background-color: #007AB8;
+}
+
+.button.button-linkedin:hover {
+  background-color: #0076b6;
+}
+
+.button.button-linkedin:after {
+  content: '';
+}
+
+.sidebar-profile .message-linkedin-info .button {
+  width: 42%;
+  height: auto;
+  margin: 5px 4%;
+  float: left;
+}
+
+.button.button-sidebar-profile-connect {
+  margin: 40px auto;
+  border-radius: 0;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+.button.button-sidebar-profile-connect:hover {
+  background-color: #D14946;
+}
+
+.button.button.button-linkedinsync {
+  width: auto;
+  min-width: 160px;
+  height: auto;
+  margin: 20px auto;
+  padding: 8px 2%;
+  color: #FFFFFF;
+  border-color: #007AB8;
+  background: transparent;
+}
+
+.button.button.button-linkedinsync:after {
+  content: '';
+}
+
+.button.button-linkedinsync i {
+  margin-right: 10px;
+  margin-bottom: 0;
+  float: none;
+  color: #007AB8;
+  font-weight: 700;
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+
+.button.button-linkedinsync:hover,
+.onecampus-view .button.button.button-linkedinsync:hover {
+  color: #FFFFFF;
+  background-color: #007AB8;
+  border-color: #007AB8;
+}
+
+.button.button-linkedinsync:hover i {
+  color: #FFFFFF;
+}
+
+.button.button--linkedin-migration__details {
+  max-width: 250px;
+  height: auto;
+  margin-top: 25px;
+  padding: 8px 2%;
+  border-color: #007AB8;
+  color: #007AB8;
+  background: transparent;
+  border-radius: 0;
+}
+
+.button.button--linkedin-migration__details:hover {
+  color: #FFFFFF;
+  background-color: #007AB8;
+}
+
+.button.button--linkedin-migration__details::after {
+  content: '';
+  margin-left: 0;
+}
+
+/* General Styles for Buttons in Passport
+**********************/
+.sidebar--passport-profile .button,
+.board-profile .button {
+  height: auto;
+}
+
+.sidebar--passport-profile .button::after,
+.board-profile .button::after {
+  content: '';
+  margin-left: 0;
+}
+
+/* Styles for Buttons in Passport About Me
+**********************/
+.button.button-summary-edit_cancel,
+.button.button-summary-edit_save,
+.button.button-summary-edit_delete {
+  width: auto;
+  height: auto;
+  margin-right: 10px;
+  padding: 8px 2%;
+  float: left;
+  font-weight: 300;
+}
+
+.button.button-summary-edit_cancel::hover,
+.button.button-summary-edit_save::hover,
+.button.button-summary-edit_delete::hover {
+  content: '';
+}
+
+.button.button-summary-edit_cancel::after,
+.button.button-summary-edit_save::after,
+.button.button-summary-edit_delete::after {
+  content: '';
+  margin-left: 0;
+}
+
+.button.button-summary-edit_cancel {
+  color: #666666;
+  background-color: #EFEFEF;
+}
+
+.button.button-summary-edit_save {
+  color: #FFFFFF;
+  background-color: #D14946;
+}
+
+.button.button-summary-edit_save:hover {
+  background-color: #ba350c;
+}
+
+.button.button-summary-edit_delete {
+  color: #FFFFFF;
+  background-color: #333333;
+}
+
+.button.button-summary-edit_delete:hover {
+  background-color: #303030;
+}
+
+.block-item--edit-form .button {
+  margin: 10px 15px 10px 0;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+/* Buttons in Sync Messages (Passport) after User unsyncs or syncs their account with Linkedin
+**********************/
+.sync-messages__buttons {
+  width: 100%;
+  padding: 0 4%;
+  margin: 0 auto;
+}
+
+.sync-messages .button {
+  width: 46%;
+  margin: 0 2%;
+  font-size: 11px;
+  font-size: 0.6875rem;
+}
+
+/* Passport Buttons in Placeholders
+**********************/
+.board-passport__placeholders .button {
+  width: 250px;
+  height: auto;
+  margin: 0 auto;
+  padding: 8px 2%;
+  color: #D14946;
+  background: transparent;
+  border-color: #D14946;
+}
+
+.board-passport__placeholders .button:hover {
+  color: #FFFFFF;
+  background-color: #D14946;
+}
+
+.button-sidebar-profile-connect {
+  height: auto;
+  padding: 8px 2%;
+  border-color: #D14946;
+  color: #D14946;
+  background-color: transparent;
+}
+
+.button-sidebar-profile-connect::after {
+  content: '';
+}
+
+/* Passport Buttons in Placeholders
+**********************/
+.button.button-interests-select {
+  width: 220px;
+  padding: 12px;
+  background: #D14946;
+}
+
+/* Interests Save Option
+**********************/
+.block-interests__save-button {
+  width: 250px;
+  margin: 20px auto;
+  background-color: #D14946;
+}
+
+.block-interests__save-button:hover {
+  color: #FFFFFF;
+  background-color: #bf360c;
+}
+
+.button.block-interests__save-button.button-option-disabled,
+.button-interests-select.button-option-disabled {
+  color: #CCCCCC;
+  background: transparent;
+  cursor: not-allowed;
+}
+
+/* Camara button to upload pic
+**********************/
+.button-camera, .button-add-connection {
+  width: 40px;
+  height: 40px;
+  padding: 8px 0;
+  position: absolute;
+  left: 44%;
+  top: 140px;
+  background-color: #CC3E1F;
+  border-radius: 50px;
+}
+
+.button-camera i, .button-add-connection i {
+  color: #FFFFFF;
+  font-size: 26px;
+  font-size: 1.625rem;
+}
+
+.button-camera ~ .sidebar-profile__avatar:before, .button-add-connection ~ .sidebar-profile__avatar:before {
+  content: '';
+  height: 165px;
+  background: #000000;
+}
+
+.button-camera--upload {
+  background-color: #FFFFFF;
+}
+
+.button-camera--upload i {
+  color: #D14946;
+}
+
+.button-camera--linkedin {
+  background-color: #007AB8;
+}
+
+.onboard-button-upload .button-camera, .onboard-button-upload .button-add-connection {
+  left: 40%;
+  text-align: center;
+  background-color: #007AB8;
+  z-index: 200;
+}
+
+/* Add more connections button in passport
+**********************/
+.button.button-more-connections {
+  width: auto;
+  max-width: 250px;
+}
+
+.button.button-more-connections i {
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 992px) {
+  .button.button-more-connections {
+    max-width: 100%;
+    float: right;
+  }
+}
+
+.block--privacy-selection .button {
+  max-width: 280px;
+  margin: 40px auto;
+  background-color: #BF360C;
+  transition: background-color ease-in 0.5s;
+}
+
+.block--privacy-selection .button:hover {
+  background-color: #d24c49;
+}
+
+.block--privacy-selection .button-option-disabled {
+  color: #CCCCCC;
+  background-color: #FFFFFF;
+}
+
+.block--privacy-selection .button-option-disabled:hover {
+  background-color: #FFFFFF;
+}
+
+.button-privacy-change__confirm {
+  background-color: #BF360C;
+}
+
+.button-privacy-change__confirm:hover {
+  background: #d04744;
+}
+
+.button-privacy-change__disabled {
+  background-color: #CCCCCC;
+}
+
+.button-privacy-change__disabled:hover {
+  background: #CCCCCC;
+  cursor: not-allowed;
+}
+
+.button.button-privacy-change__cancel {
+  background-color: #333333;
+}
+
+.button.button-privacy-change__cancel:hover {
+  background: #656565;
+}
+
+.board-passport__placeholders-saved .button {
+  background-color: #D14946;
+  color: #FFFFFF;
+}
+
+.board-passport__placeholders-saved .button:hover {
+  color: #D14946;
+  border: 2px solid #D14946;
+  background-color: transparent;
+}
+
+/* Connections Cards in Passport
+**********************/
+.card-connection {
+  height: 150px;
+  margin: 20px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 1480px) {
+  .card-connection {
+    padding: 0 15px;
+  }
+}
+
+.card-connection h4 {
+  margin: 10px 0;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.card-connection span {
+  display: block;
+  line-height: 16px;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+/* Connections Cards in Passport when user is private
+**********************/
+.card-connection--private span {
+  color: #666666;
+}
+
+.card-connection--private img {
+  opacity: .2;
+}
+
+.card-connection--private:after {
+  height: 30px;
+  width: 30px;
+  margin: auto;
+  content: '\e997';
+  font-family: raichu;
+  position: absolute;
+  top: 15px;
+  right: 0;
+  left: 60px;
+  background-color: #F35908;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+/* Cards Short Stardard
+**********************/
+.card-short {
+  min-height: 180px;
+  margin: 20px auto;
+  width: 100%;
+  position: relative;
+}
+
+/* Cards Short Courses
+**********************/
+.card-short.card--course {
+  overflow: hidden;
+}
+
+.card-short.card--course .card-content {
+  height: 100%;
+  padding-top: 20px;
+  box-shadow: none;
+  background-color: transparent;
+  position: absolute;
+  z-index: 200;
+  border: 3px solid #FFFFFF;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1480px) {
+  .card-short.card--course .card-content {
+    padding-top: 40px;
+  }
+}
+
+.card-short.card--course .card-code, .card-short.card--course .card-title {
+  color: #000000;
+}
+
+.card-short.card--course .card-code::after {
+  margin-top: 7px;
+}
+
+.card-short.card--course .card-title {
+  font-weight: 600;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 1480px) {
+  .card-short.card--course .card-title {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
+
+.card-short.card--course .card-detail {
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+/* Adds a margin for OneFaculty and OneCampus headers and avoid overlapping
+**********************/
+.view--passport {
+  margin-top: 80px;
+}
+
+/* Global Search Header Formatting
+**********************/
+.search-results__header {
+  padding: 50px 0 25px;
+}
+
+@media only screen and (max-width: 768px) {
+  .search-results__header {
+    padding-top: 20px;
+  }
+}
+
+.search-results-recommended > header {
+  padding-left: 20px;
+}
+
+/* Global Navigation Styles: global navigation styles or basics go here
+**********************/
+.navigation {
+  margin: 10px 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/* Menu trigger: Use to trigger a menu to open in mobile & mobile style for filters
+**********************/
+.navigation-search {
+  height: 100vh;
+  padding: 5px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 600;
+  overflow-y: scroll;
+  background: #212121;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  .navigation-search {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .navigation-search {
+    height: auto;
+    padding: 0 2px;
+    position: relative;
+    z-index: 200;
+    background: transparent;
+  }
+}
+
+.filter-buttons-mobile {
+  width: 100%;
+  height: 59px;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 800;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+@media only screen and (min-width: 768px) {
+  .filter-buttons-mobile {
+    display: none;
+  }
+}
+
+.filter-buttons-mobile .col-xs-6 {
+  width: 50%;
+  float: left;
+  padding: 12px 6px;
+  text-align: center;
+}
+
+.filter-buttons-mobile .col-xs-6 .button {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.nav-trigger--filters {
+  width: 250px;
+  height: 45px;
+  margin: 30px 20px;
+  padding: 8px;
+  color: #FFFFFF;
+  background: #F35908;
+  border: none;
+  border-radius: 5px;
+}
+
+.nav-trigger--filters > i {
+  display: inline-block;
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+
+.nav-trigger__title {
+  display: inline-block;
+  margin-left: 15px;
+  vertical-align: top;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+/* Vertical Navigation Styles: Use these styles for vertical menus
+**********************/
+.nav-vertical > li {
+  display: block;
+  width: 94%;
+  min-height: 48px;
+  margin: 5px 0;
+  padding: 10px 0px 10px 12px;
+  position: relative;
+  color: #666666;
+  border-bottom: 1px dotted #DDDDDD;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+.nav-vertical > li.selected {
+  font-weight: 700;
+  color: #F35908;
+}
+
+/* By default, a menu that uses radio buttons for click events will not show the button.
+**********************/
+ul.nav-vertical input[type=radio]:checked + label,
+ul.nav-vertical input[type=radio]:not(:checked) + label {
+  padding: 0;
+}
+
+ul.nav-vertical label:before,
+ul.nav-vertical label:after {
+  visibility: hidden;
+  display: none;
+}
+
+/* When using this class, the radio button will appear
+**********************/
+ul.menu-can-filter label:before,
+ul.menu-can-filter label:after {
+  visibility: visible;
+  display: block;
+}
+
+ul.menu-can-filter input[type=radio]:checked + label,
+ul.menu-can-filter input[type=radio]:not(:checked) + label {
+  padding-left: 35px;
+}
+
+/* Multi-level Vertical Navigation Styles: If navigation elements have children, use these styles for secondary levels.
+**********************/
+.item__children {
+  display: none;
+  visibility: hidden;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.item__children > li {
+  min-height: 48px;
+  height: auto;
+  padding-top: 12px;
+  border-bottom: 1px dotted #DDDDDD;
+}
+
+.item__children > li:last-child {
+  border: 0;
+}
+
+li.item-is-child {
+  margin: 2px 0;
+  padding: 16px 12px 4px;
+  position: relative;
+  background-color: #FAFAFA;
+  border-bottom: 0;
+}
+
+/* Gives style and adds an arrow to show that the menu has another level.
+**********************/
+.icon-menu-open {
+  position: absolute;
+  right: 20px;
+  top: 26px;
+}
+
+.icon-menu-open:after {
+  content: '\e991';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 0px;
+  font-size: 16px;
+}
+
+/* Boxed Navigation Styles
+**********************/
+.nav-boxed {
+  display: inline-block;
+}
+
+.nav-boxed li {
+  min-width: 120px;
+  width: auto;
+  height: 35px;
+  margin-top: -1px;
+  margin-left: -1px;
+  display: inline;
+  float: left;
+  text-align: center;
+  border: 1px solid #F35908;
+}
+
+.nav-boxed li:hover {
+  background-color: #ee5708;
+  transition: background 0.25s linear;
+}
+
+.nav-boxed li a {
+  line-height: 30px;
+}
+
+.nav-boxed li a:hover {
+  color: #FFFFFF;
+}
+
+/* Boxed Navigation Styles for selected element
+**********************/
+.nav-boxed li.selected {
+  background-color: #F35908;
+}
+
+.nav-boxed li.selected a {
+  color: #FFFFFF;
+}
+
+/* Use these styles if you use checkboxes for selection purposes in this type of navigation
+**********************/
+.navigation-search ul.nav-boxed label:before,
+.navigation-search ul.nav-boxed label:after {
+  visibility: hidden;
+  display: none;
+}
+
+.navigation-search .nav-boxed label {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  color: #F35908;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.navigation-search .nav-boxed label:hover {
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+.navigation-search .nav-boxed input[type=radio]:checked + label {
+  color: #FFFFFF;
+  font-weight: 400;
+  background: #F35908;
+}
+
+.navigation-search .nav-boxed input[type=radio]:checked + label,
+.navigation-search .nav-boxed input[type=radio]:not(:checked) + label {
+  padding: 0;
+}
+
+/* Global Search Input: Styles for flexible search input
+**********************/
+.navigation-search .search-input {
+  width: 100%;
+  position: relative;
+}
+
+.navigation-search .search-input input[type="search"] {
+  width: 90%;
+  height: 80px;
+  padding: 0 58px 0 15px;
+  font-weight: 400;
+  color: #333333;
+  background: #FFFFFF;
+  border-radius: 5px;
+  border: 1px solid #DDDDDD;
+  -webkit-appearance: none;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+.navigation-search .search-input input[type="search"]:focus {
+  color: #333333;
+}
+
+.navigation-search .search-input.is-active input[type="search"] {
+  color: #333333;
+}
+
+.navigation-search .search-input__button {
+  width: 10%;
+  height: 80px;
+  margin-left: -7px;
+  vertical-align: top;
+  color: #FFFFFF;
+  background-color: #F35908;
+  border: none;
+  border-radius: 0 5px 5px 0;
+}
+
+.navigation-search .search-input__button > i {
+  font-size: 35px;
+  font-size: 2.1875rem;
+}
+
+.navigation-search .search-input__button:hover {
+  background-color: #ee5708;
+}
+
+/* Creates and X to clear a search
+**********************/
+.icon-remove {
+  position: absolute;
+  top: 55%;
+  right: 128px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.search-input.is-active i {
+  visibility: visible;
+}
+
+.icon-remove::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 3px;
+  position: absolute;
+  background-color: #DDDDDD;
+  border-radius: 3px;
+  -webkit-transform: translateY(-5px) rotate(45deg);
+      -ms-transform: translateY(-5px) rotate(45deg);
+          transform: translateY(-5px) rotate(45deg);
+}
+
+.icon-remove::before {
+  content: '';
+  display: block;
+  width: 25px;
+  position: absolute;
+  height: 3px;
+  background-color: #DDDDDD;
+  border-radius: 3px;
+  -webkit-transform: translateY(-5px) rotate(-45deg);
+      -ms-transform: translateY(-5px) rotate(-45deg);
+          transform: translateY(-5px) rotate(-45deg);
+}
+
+/* Horizontal Tabular Navigation
+**********************/
+.nav-horizontal-tab-menu a {
+  padding: 5px 10px;
+  margin: 5px;
+  border: 2px solid;
+  text-transform: uppercase;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+.onboard-content--passport-interests .nav-horizontal-tab-menu a {
+  border-color: #DEE2E3;
+  color: #8C8C8C;
+}
+
+.onboard-content--passport-interests .nav-horizontal-tab-menu a.selected {
+  background-color: #CC3E1F;
+  border-color: #CC3E1F;
+  color: #FFFFFF;
+}
+
+/* Bubles Menu
+**********************/
+.nav-interactive-bubles-menu {
+  margin: 50px 0;
+}
+
+.nav-interactive-bubles-menu a {
+  width: 150px;
+  height: 150px;
+  padding-top: 15%;
+  margin: 5px;
+  position: relative;
+  border-radius: 50%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #8C8C8C;
+  background-color: #FFFFFF;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+.nav-interactive-bubles-menu a i {
+  font-size: 5.5em;
+}
+
+.nav-interactive-bubles-menu a span {
+  display: block;
+}
+
+.nav-interactive-bubles-menu a.selected {
+  background-color: #CC3E1F;
+  color: #FFFFFF;
+}
+
+.nav-interactive-bubles-menu .board-profile {
+  height: 70%;
+  overflow: auto;
+}
+
+.onboard-content--passport-interests .nav-interactive-bubles-menu {
+  height: 60%;
+  overflow: auto;
+}
+
+/* Bubble delete + bubble add
+**********************/
+li .bubble-delete,
+li .bubble-add,
+li .bubble-edit {
+  width: 35px;
+  height: 35px;
+  padding: 4px 0;
+  position: absolute;
+  top: 8px;
+  right: 0;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 50px;
+  background: #DDDDDD;
+}
+
+li .bubble-delete i,
+li .bubble-add i,
+li .bubble-edit i {
+  font-size: 26px;
+  font-size: 1.625rem;
+}
+
+li .bubble-add {
+  padding: 3px 0;
+}
+
+/* Onboard Menu
+**********************/
+.nav-onboard-options {
+  margin: 20px auto;
+  padding: 20px 0;
+  border-top: 1px solid #C4C8C9;
+}
+
+@media only screen and (min-width: 992px) {
+  .nav-onboard-options {
+    width: 96%;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.nav-onboard-options a {
+  color: #939393;
+  text-transform: uppercase;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.nav-onboard-options__next-step-option a {
+  width: auto;
+  height: auto;
+  min-height: 30px;
+  padding: 4px 8px;
+  text-align: center;
+  color: #CC3E1F;
+  font-weight: 600;
+  border: 2px solid #CC3E1F;
+}
+
+.nav-onboard-options__go-back-option a {
+  min-width: 150px;
+  max-width: 150px;
+  height: auto;
+  min-height: 30px;
+  padding: 4px 8px;
+  text-align: center;
+  color: #CC3E1F;
+  font-weight: 600;
+  border: 2px solid #CC3E1F;
+}
+
+.nav-onboard-options__next-step-option.option-disabled a,
+.nav-onboard-options__go-back-option.option-disabled a {
+  color: #CCCCCC;
+  border: 2px solid #CCCCCC;
+  cursor: not-allowed;
+}
+
+/* Passport Sidebar Navigation
+**********************/
+.sidebar-profile__menu {
+  text-align: left;
+}
+
+.sidebar-profile__menu ul {
+  margin: 20px 0;
+}
+
+@media only screen and (min-width: 992px) {
+  .sidebar-profile__menu ul {
+    margin: 10% auto 0;
+  }
+}
+
+.sidebar-profile__menu li {
+  margin: 1px 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 6%;
+  display: inline-block;
+  position: relative;
+}
+
+@media only screen and (min-width: 992px) {
+  .sidebar-profile__menu li {
+    width: 100%;
+    min-height: 40px;
+    display: block;
+    background-color: #222222;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .sidebar-profile__menu li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.sidebar-profile__menu li a {
+  text-transform: uppercase;
+  color: #666666;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.sidebar-profile__menu li i {
+  margin-right: 20px;
+  font-size: 28px;
+  font-size: 1.75rem;
+}
+
+.sidebar-profile__menu li a.selected {
+  color: #D14946;
+}
+
+/* Interest Select Navigation
+**********************/
+.block-interests-select__list > li {
+  min-height: 40px;
+  margin: 10px 0;
+  padding: 1% 0;
+}
+
+.nav-dropdown-asfilter {
+  width: 100%;
+  max-width: 350px;
+  height: 45px;
+  padding: 0 10px;
+  background-color: #FFFFFF;
+  border: 2px solid #CCCCCC;
+  border-radius: 50px;
+}
+
+.select-checkbox__label {
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  position: relative;
+  color: #333333;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.select-checkbox__label i {
+  position: absolute;
+  right: 0;
+  color: #D14946;
+  font-size: 25px;
+  font-size: 1.5625rem;
+  background-color: #FFFFFF;
+  z-index: 100;
+}
+
+.select-checkbox__label span {
+  padding-top: 2px;
+  position: absolute;
+  display: block;
+}
+
+.select-checkbox {
+  visibility: hidden;
+  position: absolute;
+}
+
+.select-checkbox:checked ~ label + .nav-dropdown__items {
+  visibility: visible;
+  display: block;
+  height: auto;
+  opacity: 1;
+  z-index: 200;
+}
+
+.nav-dropdown__items {
+  max-height: 160px;
+  padding: 4%;
+  overflow: auto;
+  background-color: #FFFFFF;
+  box-shadow: 2px 2px 4px 0px rgba(170, 169, 169, 0.5);
+  visibility: hidden;
+  height: 1px;
+  opacity: 0;
+  transition: opacity .25s ease-in-out;
+  position: absolute;
+}
+
+.nav-dropdown__items li {
+  padding: 10px;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.nav-dropdown__items li a {
+  color: #333333;
+  font-weight: 400;
+}
+
+.nav-dropdown__items li:hover {
+  color: #FFFFFF;
+  background-color: #d96967;
+}
+
+.nav-dropdown__items li:hover a {
+  color: #FFFFFF;
+}
+
+/* Styles for Main Navigation OneCampus by Laureate
+**********************/
+.header-main {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 400;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, transparent 100%);
+  background-color: transparent;
+  transition: all .5s ease-in-out;
+}
+
+.header-main a {
+  color: #FFFFFF;
+  transition: color .25s ease-in-out;
+}
+
+.header-main a:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media only screen and (min-width: 1480px) {
+  .header-main {
+    height: 140px;
+    padding: 20px 0;
+  }
+}
+
+/* Logo */
+.header-logo {
+  height: 50px;
+  width: 180px;
+  margin: 0 20px;
+  position: absolute;
+  z-index: 100;
+}
+
+.header-logo a {
+  width: 220px;
+  height: 60px;
+  font: 0/0 a;
+  background-size: 180px 50px;
+  border: 0;
+  outline: 0;
+}
+
+@media only screen and (min-width: 992px) {
+  .header-logo {
+    margin: 0;
+    width: 180px;
+  }
+  .header-logo a .card-short.card--course .card-content {
+    background-size: 150px 50px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .header-logo {
+    width: 200px;
+  }
+  .header-logo a {
+    background-size: 180px 50px;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .header-logo {
+    height: 70px;
+    width: 240px;
+    margin: 0;
+  }
+  .header-logo a {
+    height: 70px;
+    width: 240px;
+    background-size: 200px 50px;
+  }
+}
+
+/* Left Menu */
+@media only screen and (min-width: 992px) {
+  .header-main .header-main--left {
+    padding-left: 180px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .header-main .header-main--left {
+    padding-left: 210px;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .header-main .header-main--left {
+    padding-left: 240px;
+  }
+}
+
+/* Navigation Menus */
+.nav-menu {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-size: 0.6875rem;
+}
+
+.nav-menu li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .nav-menu li {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+
+.nav-menu i {
+  font-size: 30px;
+  font-size: 1.875rem;
+  margin-right: 8px;
+}
+
+/* Left Menu */
+.header-main--left .nav-menu {
+  padding: 30px 0 0 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .header-main--left .nav-menu {
+    margin-top: 0px;
+    font-size: 24px;
+    font-size: 1.5rem;
+    padding: 70px 0 0 0;
+    margin-left: 16px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  .header-main--left .nav-menu {
+    margin-top: 0px;
+    font-size: 30px;
+    font-size: 1.875rem;
+    padding: 100px 0 0 0;
+    margin-left: 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-main--left .nav-menu li {
+    width: 100%;
+    clear: both;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  .header-main--left .nav-menu li {
+    width: 100%;
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-main--left .nav-menu li a {
+    display: block;
+    padding: 10px 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  .header-main--left .nav-menu li a {
+    display: block;
+    padding: 10px 0;
+  }
+}
+
+.header-main--left .menu__item.selected::after {
+  content: " ";
+  width: 100%;
+  height: 4px;
+  margin: 5px auto;
+  display: block;
+  background-color: #DF4722;
+}
+
+.header-main--left .nav-menu .menu__item::before {
+  margin-right: 5px;
+  content: '/';
+  display: inline;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.header-main--left .nav-menu.nav-menu--logged .menu__item {
+  margin-left: 20px;
+  position: relative;
+}
+
+@media only screen and (min-width: 1480px) {
+  .header-main--left .nav-menu.nav-menu--logged .menu__item {
+    margin-left: 25px;
+  }
+}
+
+.header-main--left .nav-menu.nav-menu--logged .menu__item::before {
+  margin-right: 20px;
+}
+
+@media only screen and (min-width: 1480px) {
+  .header-main--left .nav-menu.nav-menu--logged .menu__item::before {
+    margin-right: 25px;
+  }
+}
+
+.header-main--left .nav-menu.nav-menu--logged .menu__item.selected::after {
+  width: 190px;
+  display: block;
+  position: absolute;
+}
+
+@media only screen and (min-width: 992px) {
+  .header-main--left .nav-menu.nav-menu--logged .menu__item.selected::after {
+    width: 95%;
+    right: -8px;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .header-main--left .nav-menu.nav-menu--logged .menu__item.selected::after {
+    width: 88%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .header-main--left {
+    padding-left: 260px;
+  }
+}
+
+/* Right Menu */
+@media only screen and (max-width: 768px) {
+  .header-main--right {
+    position: fixed;
+    bottom: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  .header-main--right {
+    position: fixed;
+    bottom: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 20px;
+  }
+}
+
+.header-main--right .nav-menu {
+  margin-top: 6px;
+}
+
+.header-main--right .nav-menu li {
+  vertical-align: top;
+}
+
+@media only screen and (min-width: 992px) {
+  .header-main--right .nav-menu .nav-dropdown--language .nav-dropdown-button {
+    padding-top: 0px;
+  }
+}
+
+.header-main--right .nav-menu .menu__item::after {
+  margin-left: 5px;
+  content: '/';
+  display: inline;
+  font-weight: 300;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .header-main .header-main--right {
+    padding-top: 20px;
+  }
+}
+
+.nav-dropdown-button {
+  display: block;
+}
+
+.nav-dropdown-button i {
+  margin-right: 5px;
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+
+/* Dropdowns */
+.nav-dropdown {
+  position: relative;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-size: 0.6875rem;
+}
+
+.nav-dropdown ul {
+  visibility: hidden;
+  height: 1px;
+  opacity: 0;
+  transition: opacity .25s ease-in-out;
+  position: absolute;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-dropdown {
+    width: 58%;
+    height: 58px;
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  .nav-dropdown {
+    width: 58%;
+    height: 58px;
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .nav-dropdown {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+
+.header-main--passport .nav-dropdown-button {
+  display: block;
+  transition: background-color .25s ease-in-out;
+}
+
+.header-main--passport .nav-dropdown-button i {
+  margin-right: 5px;
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+
+/* Dropdown open */
+.nav-dropdown.is-open ul {
+  min-width: 360px;
+  margin: auto;
+  padding: 0;
+  position: fixed;
+  visibility: visible;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  opacity: 1;
+  background-color: #282828;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  z-index: 200;
+}
+
+@media only screen and (min-width: 992px) {
+  .nav-dropdown.is-open ul {
+    min-width: 180px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: auto;
+    right: auto;
+    top: 60px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-dropdown.is-open ul {
+    bottom: 90px;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  .nav-dropdown.is-open ul {
+    bottom: 90px;
+    height: auto;
+  }
+}
+
+.nav-dropdown.is-open ul li {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-dropdown.is-open ul a {
+  padding: 25px;
+}
+
+@media only screen and (min-width: 992px) {
+  .nav-dropdown.is-open ul a {
+    padding: 12px 24px;
+    transition: padding .25s ease-in-out;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .nav-dropdown.is-open ul a:hover {
+    padding-left: 30px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  li .nav-dropdown.is-open ul {
+    top: 54px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  li .nav-dropdown--language .nav-dropdown-button {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  li .nav-dropdown--language .nav-dropdown-button {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  li .nav-dropdown--language {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  li .nav-dropdown--language {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+  }
+}
+
+.nav-dropdown--user.is-open ul {
+  min-width: 210px;
+}
+
+.header-main--right .nav-dropdown.is-open ul {
+  right: 0;
+}
+
+/* Header secondary options in unsigned version */
+.header__options {
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+  .header__options {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+.header__options li {
+  margin: 10px auto;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+@media only screen and (min-width: 992px) {
+  .header__options li {
+    display: inline-block;
+    margin: auto;
+    width: auto;
+    text-align: left;
+  }
+}
+
+.header__options li a {
+  padding: 8px 12px;
+}
+
+.header__options li a:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.header__options li i {
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+
+.header__options li span {
+  margin-left: 8px;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 992px) {
+  .header__options li span {
+    display: none;
+  }
+}
+
+/* User picture in Header */
+.nav-dropdown--user {
+  margin-right: 20px;
+  padding: 0 12px;
+}
+
+.nav-dropdown--user span {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-dropdown--user {
+    margin-right: 0;
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  .nav-dropdown--user {
+    margin-right: 0;
+    width: 40%;
+  }
+}
+
+.nav-dropdown-picture {
+  margin-left: 12px;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  transition: background-color .25s ease-in-out;
+}
+
+.nav-dropdown-picture:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-dropdown-picture {
+    float: right;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  .nav-dropdown-picture {
+    float: right;
+  }
+}
+
+.nav-dropdown-picture img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+/* Language Dropdown */
+.nav-dropdown--language .nav-dropdown-button {
+  padding-top: 8px;
+}
+
+.nav-dropdown--language span {
+  position: relative;
+  padding-right: 20px;
+}
+
+.nav-dropdown--language span:after {
+  width: 0;
+  height: 0;
+  top: 6px;
+  right: 0;
+  position: absolute;
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid rgba(255, 255, 255, 0.45);
+}
+
+/* Hamburger Icon in Mobile */
+.nav-mobile {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 200;
+}
+
+.icon-menu {
+  width: 30px;
+  height: 45px;
+  position: relative;
+}
+
+.icon-menu::before, .icon-menu em, .icon-menu::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #FFFFFF;
+  transition: all .3s ease-in-out .4s;
+}
+
+.icon-menu em {
+  top: 10px;
+}
+
+.icon-menu::after {
+  top: 20px;
+}
+
+/* Mobile menu
+**********************/
+.is-open .header-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #282828;
+  width: 100%;
+  margin-top: 0;
+  height: 100vh;
+  font-size: 28px;
+}
+
+@media only screen and (min-width: 992px) {
+  .is-open .header-container {
+    position: relative;
+    background: none;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-main--right .nav-dropdown--activity,
+  .header-main--right > .nav-dropdown--user,
+  .header-main--right > .nav-dropdown--language {
+    width: 33%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-main--right .nav-dropdown--activity .nav-dropdown-button,
+  .header-main--right > .nav-dropdown--user .nav-dropdown-button,
+  .header-main--right > .nav-dropdown--language .nav-dropdown-button {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-main--right .nav-dropdown--activity .nav-dropdown-picture,
+  .header-main--right > .nav-dropdown--user .nav-dropdown-picture,
+  .header-main--right > .nav-dropdown--language .nav-dropdown-picture {
+    float: none;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-main--right .nav-dropdown--activity {
+    padding-right: 5%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-main--right .nav-dropdown--activity .nav-dropdown-button {
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-main--right > .nav-dropdown--activity:before {
+    content: '';
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-dropdown--activity.is-open ul {
+    bottom: 90px;
+    width: 100%;
+    overflow: auto;
+    top: 120px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-dropdown--activity.is-open .activity-container {
+    display: block;
+    background-color: #282828;
+    position: fixed;
+    width: 100%;
+    right: 0;
+    top: 60px;
+  }
+}
+
+/* Navigation Toggle in Mobile
+**********************/
+.header-container {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .header-container {
+    display: block;
+  }
+}
+
+.header-main.is-open .header-container {
+  display: block;
+}
+
+/* Icon animation when main navigation is open
+**********************/
+.header-main.is-open .icon-menu::before, .header-main.is-open .icon-menu em, .icon-menu .header-main.is-open em, .header-main.is-open .icon-menu::after {
+  -webkit-transform: translateY(10px) rotate(-45deg);
+      -ms-transform: translateY(10px) rotate(-45deg);
+          transform: translateY(10px) rotate(-45deg);
+}
+
+.header-main.is-open .icon-menu em {
+  opacity: 0;
+}
+
+.header-main.is-open .icon-menu::after {
+  -webkit-transform: translateY(-10px) rotate(45deg);
+      -ms-transform: translateY(-10px) rotate(45deg);
+          transform: translateY(-10px) rotate(45deg);
+}
+
+/* Styles for Sticky Header for OneCampus by Laureate
+**********************/
+.header-main.sticky-header {
+  padding: 0;
+  height: 80px;
+  background-image: linear-gradient(to bottom, transparent 0%, transparent 100%);
+  background-color: #282828;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Styles for Main Navigation in Passport
+**********************/
+.header-main--passport {
+  height: 80px;
+  background-color: #282828;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background-image: none;
+  transition: background-color 1s ease-in-out;
+}
+
+@media only screen and (min-width: 1480px) {
+  .header-main--passport {
+    padding: 10px 0;
+    height: 80px;
+  }
+}
+
+.header-main--passport .container {
+  width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+  .header-main--passport, .header-main--passport.sticky-header {
+    padding: 0 5% 0 3%;
+  }
+}
+
+.header-main--passport .nav-dropdown--language .nav-dropdown-button {
+  padding: 8px 20px;
+}
+
+.header-main--passport .nav-dropdown--language span {
+  position: relative;
+  padding-right: 0;
+}
+
+.header-main--passport .nav-dropdown--language span:after {
+  display: none;
+}
+
+/*  No Content Placeholders for Passport
+**********************/
+.board-passport__placeholders {
+  padding: 3%;
+  text-align: center;
+}
+
+.board-passport__placeholders > i {
+  opacity: 0.3;
+  font-size: 90px;
+  font-size: 5.625rem;
+}
+
+.board-passport__placeholders-title {
+  margin: 10px 0;
+  font-weight: 700;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  color: #666666;
+}
+
+.board-passport__placeholders-description {
+  margin: 3% 0;
+  color: #666666;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+/*  Placeholders in About Me section @ Passport
+**********************/
+.block-profile-summary .board-passport__placeholders {
+  padding-top: 0;
+}
+
+.block-profile-summary .board-passport__placeholders p {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+/* User Default Avatar Letters
+**********************/
+.avatar-user-default {
+  width: 100%;
+  height: 100%;
+  display: block;
+  font-size: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.avatar-user-default--l {
+  padding-top: 25px;
+  font-size: 65px;
+  font-size: 4.0625rem;
+}
+
+.avatar-user-default--xl {
+  padding-top: 25px;
+  font-size: 70px;
+  font-size: 4.375rem;
+}
+
+/**--No results page (connections)--**/
+.search-results__container-error header.search-results__header {
+  margin-top: 40px;
+  padding: 20px 89px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.search-results__container-error header.search-results__header h2 {
+  margin-bottom: 20px;
+  color: #525252;
+  font-weight: 400;
+  font-size: 34px;
+  font-size: 2.125rem;
+}
+
+.search-results__container-error header.search-results__header h3 {
+  margin-bottom: 20px;
+  color: #f35908;
+  font-size: 53px;
+}
+
+.search-results__error {
+  text-align: center;
+}
+
+.search-results__error h2 {
+  margin-bottom: 15px;
+  padding-top: 23px;
+  font-weight: 300;
+  border-top: dotted 1px #ccc;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+ul.search-results__error-tips {
+  max-width: 400px;
+  margin: auto;
+  text-align: left;
+  color: #828282;
+  font-weight: 200;
+}
+
+ul.search-results__error-tips li {
+  list-style-type: disc;
+}
+
+/*  Privacy Messages
+**********************/
+.block-privacy__placeholder--privateuser,
+.block-privacy__placeholder--viewprivate {
+  margin: 0 auto;
+  padding: 150px 20px 0;
+  text-align: center;
+}
+
+@media only screen and (min-width: 992px) {
+  .block-privacy__placeholder--privateuser,
+  .block-privacy__placeholder--viewprivate {
+    text-align: left;
+  }
+}
+
+.block-privacy__placeholder--privateuser p,
+.block-privacy__placeholder--viewprivate p {
+  margin: 15px 0;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .block-privacy__placeholder--privateuser p,
+  .block-privacy__placeholder--viewprivate p {
+    width: 60%;
+  }
+}
+
+.block-privacy__placeholder--privateuser .button,
+.block-privacy__placeholder--viewprivate .button {
+  background-color: #BF360C;
+  color: #FFFFFF;
+  display: inline-block;
+  margin: 20px 2% 0 0;
+}
+
+.privateuser-box__icon, .viewprivate-box__icon {
+  height: 205px;
+  width: 240px;
+  background-image: url("../images/passport/logo-passport-privacy-red.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.viewprivate-box__icon {
+  height: 170px;
+  width: 170px;
+  background-image: url("../images/passport/icon-user-default.png");
+}
+
+.viewprivate-box__icon i {
+  padding: 10px;
+  display: block;
+  float: right;
+  background-color: #BF360C;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 50px;
+  font-size: 3.125rem;
+}
+
+.privateuser-box__title,
+.viewprivate-box__title {
+  margin-top: 20px;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #333333;
+  font-size: 35px;
+  font-size: 2.1875rem;
+}
+
+.privateuser-box__subtitle,
+.viewprivate-box__subtitle {
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #333333;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+.viewprivate-box__title + h3 {
+  margin: 10px 0;
+  font-weight: 300;
+}
+
+/*  Message for a private connection's passport
+**********************/
+.message--private {
+  padding: 20% 0;
+  position: relative;
+}
+
+.message--private:before {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  content: '\e997';
+  font-family: raichu;
+  opacity: .1;
+  color: #666666;
+  font-size: 440px;
+  font-size: 27.5rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  .message--private:before {
+    font-size: 590px;
+    font-size: 36.875rem;
+  }
+}
+
+.message--private h1 {
+  padding-bottom: 40px;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-size: 700;
+  font-size: 45px;
+  font-size: 2.8125rem;
+}
+
+.message--private p {
+  font-size: 22px;
+  font-size: 1.375rem;
+  z-index: 100;
+  position: relative;
+}
+
+.message--private p a {
+  display: inline;
+  padding: 0 6px;
+}
+
+.message--private .small {
+  font-size: 15px;
+  font-size: 0.9375rem;
+}
+
+.message--private .button {
+  width: 320px;
+  margin: 40px auto;
+  z-index: 100;
+  position: relative;
+}
+
+.board-passport__placeholders-saved {
+  min-height: 300px;
+  padding-top: 100px;
+  position: relative;
+  background: url(../images/passport/icon-bell-notifications-placeholder.png) no-repeat center;
+  background-size: 300px;
+}
+
+/* Splash Screens Global
+**********************/
+.progress-circle {
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  padding-top: 100px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.progress-circle--passport {
+  background-image: url("../../assets/images/passport/bg-progress-passport.png");
+  background-size: 250px 250px;
+}
+
+.progress-circle--passport i {
+  font-size: 6rem;
+  color: #CC3E1F;
+}
+
+.progress-circle__value {
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #CC3E1F;
+  font-size: 60px;
+  font-size: 3.75rem;
+}
+
+.progress-circle__message {
+  display: block;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: #CC3E1F;
+}
+
+/* Progress in Passport
+**********************/
+.sidebar-profile__progress-info .progress-circle {
+  width: 100%;
+}
+
+.sidebar-profile__progress-info .progress-circle__value {
+  margin: 25px 0;
+  display: block;
+  color: #666666;
+  font-weight: 800;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+/* Progress Circle for Passport in What is this Screen
+**********************/
+.sidebar-profile__progress-details__content .progress-circle {
+  height: 180px;
+  padding-top: 52px;
+  background-position: center;
+}
+
+/* Progress Circle for Passport BGs
+**********************/
+.progress-circle--passport-10 {
+  background-image: url("../../assets/images/passport/bg-progress-passport-10.png");
+  background-size: 100px 100px;
+}
+
+.progress-circle--passport-20 {
+  background-image: url("../../assets/images/passport/bg-progress-passport-20.png");
+  background-size: 100px 100px;
+}
+
+.progress-circle--passport-30 {
+  background-image: url("../../assets/images/passport/bg-progress-passport-30.png");
+  background-size: 100px 100px;
+}
+
+.progress-circle--passport-40 {
+  background-image: url("../../assets/images/passport/bg-progress-passport-40.png");
+  background-size: 100px 100px;
+}
+
+.progress-circle--passport-50 {
+  background-image: url("../../assets/images/passport/bg-progress-passport-50.png");
+  background-size: 100px 100px;
+}
+
+.progress-circle--passport-60 {
+  background-image: url("../../assets/images/passport/bg-progress-passport-60.png");
+  background-size: 100px 100px;
+}
+
+.progress-circle--passport-70 {
+  background-image: url("../../assets/images/passport/bg-progress-passport-70.png");
+  background-size: 100px 100px;
+}
+
+.progress-circle--passport-80 {
+  background-image: url("../../assets/images/passport/bg-progress-passport-80.png");
+  background-size: 100px 100px;
+}
+
+.progress-circle--passport-90 {
+  background-image: url("../../assets/images/passport/bg-progress-passport-90.png");
+  background-size: 100px 100px;
+}
+
+.progress-circle--passport-100 {
+  background-image: url("../../assets/images/passport/bg-progress-passport-100.png");
+  background-size: 100px 100px;
+}
+
+/* Sidebar Search
+**********************/
+.sidebar-search {
+  visibility: hidden;
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .sidebar-search {
+    visibility: visible;
+    display: block;
+  }
+}
+
+.sidebar-search.filters-are-open {
+  visibility: visible;
+  display: block;
+}
+
+.sidebar-search__title {
+  padding: 50px 0 25px;
+}
+
+.sidebar-search__subtitle {
+  margin: 30px 0 20px;
+  color: #333333;
+  clear: both;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  .sidebar-search__subtitle {
+    color: #FFFFFF;
+  }
+}
+
+.sidebar-search__input.search-input input[type="search"] {
+  width: 80%;
+  padding-right: 55px;
+}
+
+.sidebar-search__input.search-input input[type="search"],
+.sidebar-search__input button {
+  height: 50px;
+}
+
+.sidebar-search .search-input__button {
+  width: 20%;
+}
+
+/* Sidebar Onboarding
+**********************/
+.sidebar-onboard {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media only screen and (min-width: 992px) {
+  .sidebar-onboard {
+    display: table;
+    height: 100%;
+  }
+}
+
+.sidebar-onboard__logo {
+  display: block;
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  opacity: .50;
+}
+
+.sidebar-onboard__content {
+  padding: 50px 0;
+}
+
+@media only screen and (min-width: 992px) {
+  .sidebar-onboard__content {
+    width: 90%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+
+.sidebar-onboard__step-icon {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 20px;
+}
+
+.sidebar-onboard__step-name {
+  text-transform: uppercase;
+  opacity: .40;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.sidebar-onboard__step-title {
+  margin: 10px 0 20px 0;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-transform: none;
+  font-size: 38px;
+  font-size: 2.375rem;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .sidebar-onboard__step-title {
+    font-size: 26px;
+    font-size: 1.625rem;
+  }
+}
+
+.sidebar-onboard__step-description {
+  opacity: .75;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+.sidebar-onboard__progress {
+  width: 100%;
+  height: 150px;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.sidebar-onboard__progress-icon {
+  display: block;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 10px auto;
+}
+
+.sidebar-onboard__progress-title {
+  opacity: .50;
+  text-transform: uppercase;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.sidebar-onboard__progress i {
+  max-width: 4px;
+  font-size: 1em;
+  opacity: .50;
+}
+
+.sidebar-onboard__progress i.selected {
+  opacity: 1;
+}
+
+/* Sidebar Onboarding Custom Brandings
+**********************/
+.sidebar--passport-interests {
+  background-image: url("../../assets/images/passport/bg-sidebar-passport-interests.png");
+  background-color: #CC3E1F;
+  color: #FFFFFF;
+}
+
+/* Sidebar Profile
+**********************/
+.sidebar--passport-profile {
+  background-image: url("../../assets/images/passport/bg-sidebar-passport-profile.png");
+  background-color: #CC3E1F;
+  color: #FFFFFF;
+}
+
+/* Sidebar Privacy
+**********************/
+.sidebar--passport-privacy {
+  background-image: url("../../assets/images/passport/bg-sidebar-passport-privacy.png");
+  background-color: #CC3E1F;
+  color: #FFFFFF;
+}
+
+/* Sidebar Passport
+**********************/
+.sidebar-profile {
+  padding: 30px 4% 0;
+  color: #FFFFFF;
+  text-align: center;
+  background-color: #171516;
+}
+
+@media only screen and (min-width: 992px) {
+  .sidebar-profile {
+    min-height: 100%;
+    position: fixed;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .sidebar-profile {
+    position: relative;
+  }
+}
+
+.sidebar-profile__basic-info {
+  position: relative;
+}
+
+@media only screen and (min-width: 992px) {
+  .sidebar-profile__basic-info {
+    margin-bottom: 30px;
+  }
+}
+
+.sidebar-profile__profilepic {
+  width: 165px;
+  height: 165px;
+  margin: 20px auto 30px;
+  overflow: hidden;
+  background: url(../../assets/images/passport/icon-sidebar-user-default.png) center center no-repeat;
+  background-size: 70%;
+  border-radius: 150px;
+  border: 5px solid #CC3E1F;
+  box-shadow: 0 0 1px 0px #CC3E1F inset, 0 0 1px 0px #CC3E1F;
+}
+
+.sidebar-profile__profilepic img {
+  width: 100%;
+  height: auto;
+  border-radius: 150px;
+}
+
+.sidebar-profile__profilepic .divider {
+  display: none;
+}
+
+.divider {
+  height: 1px;
+  margin: 10px 0;
+  display: block;
+  opacity: 0.3;
+  background-color: #FFFFFF;
+}
+
+.sidebar-profile__profilepic-upload {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #007AB8;
+}
+
+.sidebar-profile__profilepic-upload a {
+  color: #FFFFFF;
+}
+
+.sidebar-profile__profilepic-upload i {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 25px;
+  font-size: 1.5625rem;
+}
+
+.sidebar-profile__profilepic-upload .icon-pencil,
+.sidebar-profile__profilepic-upload .icon-chain {
+  opacity: 0.4;
+}
+
+.sidebar-profile__profilepic-upload h5 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.sidebar-profile__profilepic-upload .upload-pic--manual {
+  width: 100%;
+  height: 50%;
+  margin: 0;
+  padding: 15px;
+  cursor: pointer;
+  color: #D14946;
+  background-color: #FFFFFF;
+}
+
+.sidebar-profile__profilepic-upload .upload-pic--manual:hover {
+  color: #FFFFFF;
+  background-color: #D14946;
+}
+
+.sidebar-profile__profilepic-upload .upload-pic--linkedin {
+  width: 100%;
+  height: 50%;
+  padding-top: 10px;
+  background: #007AB8;
+}
+
+.sidebar-profile__profilepic-upload .upload-pic--linkedin:hover {
+  background-color: #0077b3;
+}
+
+.sidebar-profile__full-name {
+  margin: 30px 0 10px;
+  font-weight: 700;
+  font-size: 25px;
+  font-size: 1.5625rem;
+}
+
+.sidebar-profile__email {
+  cursor: default;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.sidebar-profile__logo-institution {
+  max-width: 200px;
+  height: auto;
+}
+
+.sidebar-profile__experience-title {
+  margin-top: 10px;
+  font-weight: 600;
+  line-height: 26px;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+.sidebar-profile__experience-title span {
+  margin-right: 4px;
+}
+
+.sidebar-profile__linkedin-info {
+  width: 85%;
+  margin: 30px auto;
+}
+
+.sidebar-profile__linkedin-info .icon-linkedin-isolated {
+  margin: 10px 0 25px;
+  padding: 3px;
+  background-color: #007AB8;
+  border-radius: 5px;
+  font-size: 38px;
+  font-size: 2.375rem;
+}
+
+.sidebar-profile__linkedin-info .icon-check-bold {
+  margin-bottom: 20px;
+  float: left;
+}
+
+.sidebar-profile__linkedin-info .icon-synched {
+  padding: 8px;
+  background: #007AB8;
+  border-radius: 50px;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+.sidebar-profile__linkedin-info_sync {
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1480px) {
+  .sidebar-profile__linkedin-info_sync {
+    width: 210px;
+  }
+}
+
+.sidebar-profile__linkendin-info-title {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.sidebar-profile__linkedin-info-details {
+  font-weight: 300;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+.progress-circle__title {
+  margin-top: 50px;
+  display: block;
+  color: #CCCCCC;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.sidebar-profile__progress-details {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+.sidebar-profile__progress-details__content {
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: 200;
+  background-color: #171516;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.sidebar-profile__progress-details__title {
+  margin: 25px 0;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+.sidebar-profile__progress-details__description {
+  padding: 0 2%;
+  color: #666666;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+.sidebar-profile.details-are-open .sidebar-profile__progress-details__content {
+  visibility: visible;
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+
+.sidebar-profile__progress-details__checklist li {
+  margin: 30px 0;
+}
+
+.sidebar-profile__progress-details__checklist li:after {
+  content: '';
+  width: 80px;
+  height: 2px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  top: 14px;
+  background-color: #D14946;
+}
+
+.sidebar-profile__logo {
+  margin: 40px 0;
+}
+
+.sidebar-profile__logo-passport {
+  width: 160px;
+  max-width: 160px;
+}
+
+/* Sidebar Profile OneCampus
+**********************/
+.sidebar-profile__email {
+  color: #666666;
+}
+
+/* Privacy Setting Option
+**********************/
+.sidebar-profile__privacy--change__title {
+  margin-bottom: 5px;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+.sidebar-profile__privacy--change__options {
+  transition: all ease-in 0.5s;
+}
+
+.sidebar-profile__privacy--change__options i {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+  padding-top: 2px;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-size: 1.5rem;
+  background-color: #BF360C;
+  border-radius: 50px;
+}
+
+.sidebar-profile__privacy--change__options span {
+  color: #FFFFFF;
+}
+
+.sidebar-profile__privacy--change__options:hover i {
+  background-color: #D14946;
+}
+
+.sidebar-profile__privacy--change__options:hover span {
+  font-weight: 700;
+}
+
+/* Sidebar for a private connection's passport
+**********************/
+.sidebar-profile--private {
+  overflow: visible;
+  z-index: 100;
+  padding: 30px 0 0;
+}
+
+.sidebar-profile--private .sidebar-profile__profilepic {
+  border: 5px solid #666666;
+  background-color: #FFFFFF;
+}
+
+.sidebar-profile--private .sidebar-profile__profilepic img {
+  opacity: .2;
+}
+
+.sidebar-profile--private h6, .sidebar-profile--private p {
+  color: #666666;
+}
+
+.sidebar-profile__message {
+  position: relative;
+  font-size: 22px;
+  font-size: 1.375rem;
+}
+
+.sidebar-profile__message p {
+  display: block;
+  padding: 40px 30px;
+  margin: auto;
+  width: 80%;
+  max-width: 340px;
+  border-top: 1px solid #333333;
+}
+
+@media only screen and (min-width: 992px) {
+  .sidebar-profile__message p {
+    padding: 50px 20px;
+    border-bottom: 1px solid #333333;
+  }
+}
+
+.sidebar-profile__message .icon--private {
+  height: 80px;
+  width: 80px;
+  margin: auto;
+  padding: 5px;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  background-color: #F35908;
+  font-size: 65px;
+  font-size: 4.0625rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .sidebar-profile__message .icon--private {
+    top: 0;
+    bottom: 0;
+    left: auto;
+    right: -40px;
+  }
+}
+
+/* Sidebar Notification bubble
+**********************/
+.notification-count {
+  width: 23px;
+  height: 23px;
+  padding: 4px 0;
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  color: #FFFFFF;
+  text-align: center;
+  background-color: #D14946;
+  border-radius: 20px;
+  font-size: 11px;
+  font-size: 0.6875rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .notification-count {
+    left: 60px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .notification-count {
+    right: 15px;
+    left: auto;
+  }
+}
+
+.sidebar-profile__profilepic-upload-nosync .upload-pic--linkedin {
+  display: none;
+}
+
+.sidebar-profile__profilepic-upload-nosync .upload-pic--manual {
+  height: 100%;
+  background-color: #1d1d1d;
+}
+
+.sidebar-profile__profilepic-upload-nosync .upload-pic--manual i {
+  margin-top: 10px;
+  font-size: 60px;
+  font-size: 3.75rem;
+}
+
+/* Splash Screens Global
+**********************/
+.splash-screen {
+  display: table;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: #FFFFFF;
+}
+
+@media only screen and (min-width: 992px) {
+  .splash-screen {
+    width: 500px;
+    height: 650px;
+    box-shadow: 4px 4px 0px 1px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .splash-screen {
+    width: 600px;
+    height: 750px;
+  }
+}
+
+.splash-screen__content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.splash-screen--passport-onboard {
+  background-image: url("../../assets/images/passport/logo-passport.png");
+  background-image: url("../../assets/images/passport/logo-passport.svg");
+  background-repeat: no-repeat;
+  background-position: center 20px;
+}
+
+.splash-screen__title {
+  width: 96%;
+  margin: 5px auto;
+  text-align: center;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #CC3E1F;
+  font-size: 35px;
+  font-size: 2.1875rem;
+}
+
+.splash-screen__description {
+  width: 96%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #000000;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+.splash-screen__navigation {
+  max-width: 480px;
+  margin: 10px auto;
+}
+
+@media only screen and (min-width: 1480px) {
+  .splash-screen__navigation {
+    max-width: 550px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .splash-screen__navigation li {
+    width: 50%;
+    float: left;
+  }
+}
+
+/* Transitions
+**********************/
+/* Animate Elements (add this class with an animation class in the js to get the desired effect)
+**********************/
+.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* Animate Elements to Bounce In
+**********************/
+@-webkit-keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+
+/* Animate Elements to Slide In from the Left
+**********************/
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+
+/* Modal Behaviors - Do not add specific attributes to this container. Add it to animate modals globally.
+**********************/
+.modal.ng-animate {
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal.ng-animate .container {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal.ng-animate.ng-enter {
+  background: transparent;
+}
+
+.modal.ng-animate.ng-enter .container {
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.modal.ng-animate.ng-enter.ng-enter-active {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal.ng-animate.ng-enter.ng-enter-active .container {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.modal.ng-animate.ng-leave {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal.ng-animate.ng-leave .container {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.modal.ng-animate.ng-leave.ng-leave-active .container {
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  opacity: 0;
+}
+
+.modal.ng-animate.ng-leave.ng-leave-active {
+  background: transparent;
+}
+
+/* Interest Modal
+**********************/
+.modal.modal-interests.ng-animate.ng-enter.ng-enter-active {
+  background: rgba(221, 221, 221, 0.8);
+}
+
+.modal.modal-interests.ng-animate.ng-leave {
+  background: rgba(221, 221, 221, 0.8);
+}
+
+/* Alerts Animation
+**********************/
+.alert--passport.ng-animate {
+  transition: all 0.3s ease;
+}
+
+.alert--passport.ng-animate.ng-enter {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+
+/* Shame on you and your Code
+**********************/
+/* You know what this does. Repeat yourself "I need to code better CSS"
+ **********************/
+/* Hack for full height in all the pages. This is created because Angular creates a single div as a container for all the layout.
+ **********************/
+#main-content {
+  height: 100%;
+  padding-top: 1px;
+  margin-top: -1px;
+}

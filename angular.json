@@ -28,9 +28,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./src/assets/styles2/wayfinder.css",   
+              "src/assets/styles/wayfinder.css",
               "src/styles.scss"
-              
             ],
             "scripts": [
               {

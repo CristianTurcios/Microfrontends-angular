@@ -1,0 +1,22 @@
+{
+    "data": [
+        {
+            "name": "Financial Aid Options",
+            "description": "As a Walden student, you’ll find a number of resources available to you to help fund your education.",
+            "action_url": "https://www.waldenu.edu/financial-aid/types",
+            "category": "Financial"
+        },
+        {
+            "name": "Events and Webinars",
+            "description": "Events and Webinars all around the world",
+            "action_url": "https://www.waldenu.edu/connect/events-and-webinars",
+            "category": "Events"
+        },
+        {
+            "name": "Contact Us",
+            "description": "<ul><li>Call us: 1-866-492-5336</li></ul>",
+            "action_url": "",
+            "category": "Support"
+        }
+    ]
+}

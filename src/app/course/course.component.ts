@@ -10,18 +10,9 @@ export class CourseComponent implements OnInit {
   @Output() goToClassroom: EventEmitter<any> = new EventEmitter();
   @Output() courseMaterials: EventEmitter<any> = new EventEmitter();
 
-
   constructor() { }
 
   ngOnInit() {
     console.log('course 1', this.course);
   }
-
-  // goToClassroom() {
-  //   console.log('hello');
-  // }
-
-  // courseMaterials() {
-  //   console.log('hello 2');
-  // }
 }

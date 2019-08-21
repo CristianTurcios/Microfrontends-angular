@@ -1,0 +1,23 @@
+(function(window) {
+	window.__env = window.__env || {};
+	window.__env.profileApiApplicationId = '$$ANGULAR_PROFILE_APPLICATION_ID$$';
+	window.__env.ENVIRONMENT = '$$ANGULAR_ENVIRONMENT$$';
+	window.__env.domainEnvironment = '$$ANGULAR_DOMAIN_ENVIRONMENT$$';
+	window.__env.profileApiEndpoint = '$$ANGULAR_PROFILE_ENDPOINT$$';
+	window.__env.unifiedPortalApi = '$$ANGULAR_UP_API$$';
+	window.__env.unifiedPortalGraphQl = '$$ANGULAR_UP_GRAPHQL$$';
+	window.__env.wagtailEndpoint = '$$ANGULAR_WAGTAIL_ENDPOINT$$';
+	window.__env.graphUniversityAttribute = '$$ANGULAR_UNIV_EXTENSION$$';
+	window.__env.teacherEndpoint = '$$ANGULAR_TEACHER_ENDPOINT$$';
+	window.__env.adalConfig = $$ANGULAR_ADAL_CONFIG$$;
+	window.__env.idleConfiguration = $$ANGULAR_IDLE_CONFIG$$;
+	window.__env.globalSetttings = $$ANGULAR_GLOBAL_SETTINGS$$;
+	window.__env.ANNOUNCEMENT_SERVER = $$ANGULAR_ANNOUNCEMENT_SERVER$$;
+	window.__env.HOLD_NOTIFICATIONS_SERVER = $$ANGULAR_HOLDS_SERVER$$;
+	window.__env.SERVER_WATSON = $$ANGULAR_SERVER_WATSON$$;
+	window.__env.progressCoachEndpoint = '$$ANGULAR_PROGRESSCOACH_ENDPOINT$$';
+	window.__env.apiManagementConfig = $$API_MANAGEMENT_CONFIG$$;
+	window.__env.liveChatURL= "$$LIVE_CHAT_URL$$";
+	window.__env.wagtailEndpointGraphql= "$$WAGTAIL_ENDPOINT_GRAPHQL$$";
+	window.__env.AVAAMO_JWT = $$AVAAMO_CONFIG$$;
+})(this);
