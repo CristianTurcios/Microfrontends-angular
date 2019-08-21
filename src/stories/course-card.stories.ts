@@ -1,4 +1,4 @@
-import { storiesOf, moduleMetadata } from '@storybook/angular';
+import { storiesOf } from '@storybook/angular';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, object, text, select  } from '@storybook/addon-knobs/react';
 import { CourseComponent } from '../app/course/course.component';
@@ -101,9 +101,14 @@ storiesOf('Course Card', module)
     .add('Simple Course Card', () => ({
         component: CourseComponent,
         props: {
-            course: object('Course information', courseInformation),
-            goToClassroom: actions.goToClassroom,
-            courseMaterials: actions.courseMaterials,
+          title: text('title', 'College Physics Residency'),
+          endDate: text('endDate', '2018-12-15T00:00:00.000Z'),
+          duration: text('duration', '6 weeks'),
+          startDate: text('startDate', '2018-11-13T00:00:00.000Z'),
+          courseCode: text('courseCode', 'PHY - 1030'),
+          courseCredits: text('courseCredits', '0'),
+          goToClassroom: actions.goToClassroom,
+          courseMaterials: actions.courseMaterials,
         }
     }),
     {

@@ -1,8 +1,7 @@
-<div class="col-12 col-lg-6">
   <div class="card card--medium card--course">
     <div class="card__header row">
-      <div class="col-lg-12"><span class="card__subtitle">{{course["course"]["courseCode"]}}</span>
-        <h3 class="card__title">{{course["course"]["title"]}}</h3>
+      <div class="col-lg-12"><span class="card__subtitle">{{courseCode}}</span>
+        <h3 class="card__title">{{title}}</h3>
       </div>
     </div>
     <div class="card__content row">
@@ -26,24 +25,24 @@
         <svg class="icon label__icon" role="img" aria-hidden="true">
           <title>Value Icon</title>
           <use xlink:href="../../assets/images/icons/walden-icons.svg#icon-list"></use>
-        </svg><span class="label__name">Value</span><span class="label__title">{{course["ext_laur_course_credits"]  ? course["ext_laur_course_credits"] : 0 }}
+        </svg><span class="label__name">Value</span><span class="label__title">{{courseCredits ? courseCredits : 0 }}
           Credits</span>
       </div>
-      <div class="col-6 col-xl-4 hidden-md-down label--with-icons">
+      <!-- <div class="col-6 col-xl-4 hidden-md-down label--with-icons">
         <svg class="icon label__icon" role="img" aria-hidden="true">
           <title>Duration Icon</title>
           <use xlink:href="../../assets/images/icons/walden-icons.svg#icon-calendar"></use>
-        </svg><span class="label__name">Duration</span><span class="label__title">{{course["course"]["duration"]}}</span>
+        </svg><span class="label__name">Duration</span><span class="label__title">{{duration}}</span>
 
-      </div>
+      </div> -->
     </div>
     <div class="card__content row">
       <div class="col-lg-12">
         <progress class="progress--course" value="50" max="100" role="progressbar" aria-valuemin="0" aria-valuenow="50"
           aria-valuemax="100"></progress>
         <div class="row">
-          <span class="col-6 progress__label progress__label-start">Start: {{course["term"]["startDate"]}}</span>
-          <span class="col-6 progress__label progress__label-ending">End: {{course["term"]["endDate"]}}</span>
+          <span class="col-6 progress__label progress__label-start">Start: {{startDate}}</span>
+          <span class="col-6 progress__label progress__label-ending">End: {{endDate}}</span>
         </div>
       </div>
     </div>
@@ -56,4 +55,4 @@
       </div>
     </div>
   </div>
-</div>
+<!-- </div> -->
