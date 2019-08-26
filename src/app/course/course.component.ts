@@ -7,11 +7,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class CourseComponent implements OnInit {
   @Input() title: string;
+  @Input() portal: string;
   @Input() endDate: string;
   @Input() duration: string;
   @Input() startDate: string;
   @Input() courseCode: string;
   @Input() courseCredits: string;
+  @Input() instructors: string;
 
   @Output() goToClassroom: EventEmitter<any> = new EventEmitter();
   @Output() courseMaterials: EventEmitter<any> = new EventEmitter();
@@ -19,11 +21,9 @@ export class CourseComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('title', this.title);
-    console.log('endDate', this.endDate);
-    console.log('duration', this.duration);
-    console.log('startDate', this.startDate);
-    console.log('courseCode', this.courseCode);
-    console.log('courseCredits', this.courseCredits);
+  }
+
+  parseToJson(teachers) {
+    return JSON.parse(teachers);
   }
 }
