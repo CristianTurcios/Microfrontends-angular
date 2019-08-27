@@ -1,0 +1,18 @@
+[
+  {
+    "id": {
+      "scope": null,
+      "name": "course"
+    },
+    "isSymlink": true,
+    "hash": "4809561b34384fc017da4d2efc93d79ca3d90e22"
+  },
+  {
+    "id": {
+      "scope": "cristianturcios.walden",
+      "name": "course"
+    },
+    "isSymlink": false,
+    "hash": "c00989196701148dcbba837a006893ff040c3a5e"
+  }
+]
