@@ -15,15 +15,22 @@ export class CourseComponent implements OnInit {
   @Input() courseCredits: string;
   @Input() instructors: string;
 
+  teachers: Array<object> = [];
+
   @Output() goToClassroom: EventEmitter<any> = new EventEmitter();
   @Output() courseMaterials: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  parseToJson(teachers) {
-    return JSON.parse(teachers);
+  parseToJson(data) {
+
+    try {
+      this.teachers = JSON.parse(data);
+      return JSON.parse(data);
+    } catch (error) {
+      return [];
+    }
   }
 }

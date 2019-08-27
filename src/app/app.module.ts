@@ -15,7 +15,7 @@ import { CourseComponent } from './course/course.component';
   ],
   providers: [],
   entryComponents: [CourseComponent],
-  bootstrap: [AppComponent]
+  // bootstrap: [AppComponent]
 })
 export class AppModule {
   constructor(injector: Injector) {

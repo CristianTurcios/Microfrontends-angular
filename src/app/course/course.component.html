@@ -5,7 +5,7 @@
     </div>
   </div>
   <div class="card__content row">
-    <div class="col-12 col-lg-6 col-xl-8 label--with-icons label--instructor"
+      <div class="col-12 col-lg-6 col-xl-8 label--with-icons label--instructor"
       *ngIf="parseToJson(instructors).length > 0">
       <svg class="icon label__icon" role="img" aria-hidden="true">
         <title>Instructor Icon</title>
@@ -16,8 +16,8 @@
       </a>
       <span class="label__name">Instructor</span>
       <a class="label--instructor_additional" href="#">
-        <span class="label__title">Robert Finkelmeir</span>
-        <span class="badge__label">{{parseToJson(instructors)}}+ </span>
+        <span class="label__title">{{teachers[0].givenName}} {{teachers[0].familyName}} </span>
+        <span class="badge__label" *ngIf="teachers.length > 1">{{(teachers.length - 1)  }}+ </span>
         <div class="tooltip">
           There may be additional instructors teaching this course. Please check the course in Blackboard to view all
           instructors.
