@@ -1,58 +1,81 @@
-  <div class="card card--medium card--course">
-    <div class="card__header row">
-      <div class="col-lg-12"><span class="card__subtitle">{{courseCode}}</span>
-        <h3 class="card__title">{{title}}</h3>
-      </div>
+<div class="card card--medium card--course">
+  <div class="card__header row">
+    <div class="col-lg-12"><span class="card__subtitle">{{courseCode}}</span>
+      <h3 class="card__title">{{title}}</h3>
     </div>
-    <div class="card__content row">
-      <div class="col-12 col-lg-6 col-xl-8 label--with-icons label--instructor">
-        <svg class="icon label__icon" role="img" aria-hidden="true">
-          <title>Instructor Icon</title>
-          <use xlink:href="../../assets/images/icons/walden-icons.svg#icon-user-reading"></use>
-        </svg>
-        <a class="label--instructor_availabilty label--offline" href="#">Offline
-          <div class="tooltip">The instructor is not available, click to send a email.</div>
-        </a>
-        <span class="label__name">Instructor</span>
-        <a class="label--instructor_additional" href="#">
-          <span class="label__title">Robert Finkelmeir </span>
-          <span class="badge__label">4+ </span>
-          <div class="tooltip">
-            There may be additional instructors teaching this course. Please check the course in Blackboard to view all
-            instructors.
-          </div>
-        </a>
-        <svg class="icon label__icon" role="img" aria-hidden="true">
-          <title>Value Icon</title>
-          <use xlink:href="../../assets/images/icons/walden-icons.svg#icon-list"></use>
-        </svg><span class="label__name">Value</span><span class="label__title">{{courseCredits ? courseCredits : 0 }}
-          Credits</span>
-      </div>
-      <!-- <div class="col-6 col-xl-4 hidden-md-down label--with-icons">
-        <svg class="icon label__icon" role="img" aria-hidden="true">
-          <title>Duration Icon</title>
-          <use xlink:href="../../assets/images/icons/walden-icons.svg#icon-calendar"></use>
-        </svg><span class="label__name">Duration</span><span class="label__title">{{duration}}</span>
+  </div>
+  <div class="card__content row">
+      <div class="col-12 col-lg-6 col-xl-8 label--with-icons label--instructor"
+      *ngIf="parseToJson(instructors).length > 0">
+      <svg class="icon label__icon" role="img" aria-hidden="true">
+        <title>Instructor Icon</title>
+        <use xlink:href="../../assets/images/icons/walden-icons.svg#icon-user-reading"></use>
+      </svg>
+      <a class="label--instructor_availabilty label--offline" href="#">Offline
+        <div class="tooltip">The instructor is not available, click to send a email.</div>
+      </a>
+      <span class="label__name">Instructor</span>
+      <a class="label--instructor_additional" href="#">
+        <span class="label__title">{{teachers[0].givenName}} {{teachers[0].familyName}} </span>
+        <span class="badge__label" *ngIf="teachers.length > 1">{{(teachers.length - 1)  }}+ </span>
+        <div class="tooltip">
+          There may be additional instructors teaching this course. Please check the course in Blackboard to view all
+          instructors.
+        </div>
+      </a>
+    </div>
+    <div class="col-6 col-xl-4 hidden-md-down label--with-icons">
+      <svg class="icon label__icon" role="img" aria-hidden="true">
+        <title>Value Icon</title>
+        <use xlink:href="../../assets/images/icons/walden-icons.svg#icon-list"></use>
+      </svg>
+      <span class="label__name">Value</span>
+      <span class="label__title">{{courseCredits ? courseCredits : 0 }} Credits</span>
+    </div>
+  </div>
+  <div class="card__content row" *ngIf="duration !== '' && duration">
+    <div class="col-12 col-lg-6 label--with-icons">
+      <svg class="icon label__icon" role="img" aria-hidden="true">
+        <title>Duration Icon</title>
+        <use xlink:href="../../assets/images/icons/walden-icons.svg#icon-calendar"></use>
+      </svg><span class="label__name">Duration</span><span class="label__title">{{duration}}</span>
+    </div>
+  </div>
 
-      </div> -->
-    </div>
+  <ng-container *ngIf="endDate !== '' && endDate; then hasEndDate; else notEndDate"></ng-container>
+  <ng-template #hasEndDate>
     <div class="card__content row">
       <div class="col-lg-12">
         <progress class="progress--course" value="50" max="100" role="progressbar" aria-valuemin="0" aria-valuenow="50"
           aria-valuemax="100"></progress>
         <div class="row">
-          <span class="col-6 progress__label progress__label-start">Start: {{startDate}}</span>
-          <span class="col-6 progress__label progress__label-ending">End: {{endDate}}</span>
+          <span class="col-6 progress__label progress__label-start">Start: {{startDate | date: 'MM/dd/yyyy' }}</span>
+          <span class="col-6 progress__label progress__label-ending">End: {{endDate | date: 'MM/dd/yyyy'}}</span>
         </div>
       </div>
     </div>
-    <div class="card__navigation row">
-      <div class="col-12 col-lg-6">
-        <a class="button button--radius button-with-icons" (click)="goToClassroom.next()"><span>Go to Classroom</span></a>
-      </div>
-      <div class="col-12 col-lg-6">
-        <a class="button button--ghost button--radius button-with-icons" (click)="courseMaterials.next()"><span>Course Materials</span></a>
+  </ng-template>
+  <ng-template #notEndDate>
+    <div class="card__content row">
+      <div class="col-12 alert alert--third">
+        <div class="label--with-icons">
+          <svg class="icon label__icon" role="img" aria-hidden="true">
+            <title>Alert Icon</title>
+            <use xlink:href="../../assets/images/icons/walden-icons.svg#icon-calendar-alt"></use>
+          </svg><span class="label__title">This Course has no End Date </span>
+        </div>
       </div>
     </div>
+  </ng-template>
+  <div class="card__navigation row">
+    <div class="col-12 col-lg-6">
+      <a class="button button--radius button-with-icons" (click)="goToClassroom.next()">
+        <span>Go to Classroom</span></a>
+    </div>
+    <div class="col-12 col-lg-6">
+      <a class="button button--ghost button--radius button-with-icons" (click)="courseMaterials.next()">
+        <span>Course Materials</span>
+      </a>
+    </div>
   </div>
-<!-- </div> -->
+</div>

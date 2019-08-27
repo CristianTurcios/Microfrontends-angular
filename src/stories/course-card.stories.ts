@@ -1,79 +1,9 @@
 import { storiesOf } from '@storybook/angular';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, object, text, select  } from '@storybook/addon-knobs/react';
+import { withKnobs, object, text, select, array   } from '@storybook/addon-knobs';
 import { CourseComponent } from '../app/course/course.component';
 import { Button } from '@storybook/angular/demo';
 import { withA11y } from '@storybook/addon-a11y';
-
-export const courseInformation = {
-    term: {
-      dateLastModified: null,
-      endDate: '2018-12-15T00:00:00.000Z',
-      parentSourcedId: 'USW1.201850',
-      sourcedId: 'USW1.201504.PRUEBA',
-      startDate: '2018-11-15T00:00:00.000Z',
-      status: 'active',
-      title: 'PhD Residency 4 Henry Test',
-      type: 'vres',
-      parent: {
-        dateLastModified: '2017-01-14T12:16:27.000Z',
-        endDate: null,
-        parentSourcedId: 'USW1.1718',
-        sourcedId: 'USW1.201850',
-        startDate: '2018-11-13T00:00:00.000Z',
-        status: 'active',
-        title: '2018 Spring Qtr 02/26-05/20',
-        type: 'quarter',
-        __typename: 'ParentTerm'
-      },
-      __typename: 'Term'
-    },
-    school: {
-      boarding: 'false',
-      classification: 'private',
-      dateLastModified: '2009-07-10T15:18:50.000Z',
-      gender: 'mixed',
-      identifier: '125231',
-      name: 'Walden University(WAL)',
-      parentSourcedId: null,
-      sourcedId: 'USW1',
-      status: 'active',
-      type: 'online',
-      __typename: 'School'
-    },
-    course: {
-      courseCode: 'PHY - 1030',
-      dateLastModified: null,
-      description: null,
-      duration: '6 weeks',
-      grade: null,
-      orgSourcedId: 'USW1',
-      schoolYearId: 'USW1.1617',
-      sourcedId: 'USW1.PHY1030.PRUEBA',
-      status: 'active',
-      subjects: 'Physics',
-      title: 'College Physics Residency',
-      __typename: 'Course'
-    },
-    classCode: 'PHY - 1806 - 90',
-    classType: 'vres',
-    courseSourcedId: 'USW1.PHY1030.PRUEBA',
-    dateLastModified: null,
-    ext_laur_course_credits: null,
-    ext_laur_fulfillment_type: 'fnom',
-    grade: null,
-    lmsClassId: '_5542_1',
-    location: null,
-    sourcedId: 'USW1.21711.201504.PRUEBA',
-    status: 'active',
-    subjects: 'English',
-    termSourcedId: 'USW1.201504.PRUEBA',
-    title: 'College Residency Physics',
-    courseTitle: null,
-    finalGrade: 'A+',
-    teachers: [],
-    __typename: 'UserClasses'
-};
 
 export const actions = {
     goToClassroom: action('goToClassroom'),
@@ -90,12 +20,6 @@ const defaultValue = 'unified';
 const groupId = 'GROUP-ID1';
 
 storiesOf('Course Card', module)
-    // .addDecorator(
-    //     moduleMetadata({
-    //         // imports: [MyExampleModule],
-    //         // providers: [MyExampleService]
-    //     }),
-    // )
     .addDecorator(withKnobs)
     .addDecorator(withA11y)
     .add('Simple Course Card', () => ({
@@ -107,6 +31,11 @@ storiesOf('Course Card', module)
           startDate: text('startDate', '2018-11-13T00:00:00.000Z'),
           courseCode: text('courseCode', 'PHY - 1030'),
           courseCredits: text('courseCredits', '0'),
+          portal: text('coursportaleCredits', '0'),
+          // tslint:disable-next-line:max-line-length
+          // instructors: array('instructors', '[{'email': 'elder.godoy@dev.waldenu.edu', 'familyName': 'Godoy','givenName': 'Elder','identifier': 'USW1.A000999999.TEST','phone': null,'role': 'student','sms': null,'userId': 'elder.godoy@dev.waldenu.edu','username': 'elder.godoy@dev.waldenu.edu','__typename': 'teacher'}]'),
+          // tslint:disable-next-line:max-line-length
+          instructors: text('instructors', JSON.stringify([{'email': 'elder.godoy@dev.waldenu.edu', 'familyName': 'Godoy','givenName': 'Elder','identifier': 'USW1.A000999999.TEST','phone': null,'role': 'student','sms': null,'userId': 'elder.godoy@dev.waldenu.edu','username': 'elder.godoy@dev.waldenu.edu','__typename': 'teacher'}])),
           goToClassroom: actions.goToClassroom,
           courseMaterials: actions.courseMaterials,
         }
