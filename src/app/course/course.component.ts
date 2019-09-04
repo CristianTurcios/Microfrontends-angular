@@ -22,14 +22,17 @@ export class CourseComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('dataaaa', this.instructors);
+  }
 
   parseToJson(data) {
-
+    console.log('data', data);
     try {
       this.teachers = JSON.parse(data);
       return JSON.parse(data);
     } catch (error) {
+      console.log('error', error);
       return [];
     }
   }

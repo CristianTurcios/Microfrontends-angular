@@ -1,14 +1,15 @@
 import { storiesOf } from '@storybook/angular';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, object, text, select, array   } from '@storybook/addon-knobs';
+import { withKnobs, text, select } from '@storybook/addon-knobs';
 import { CourseComponent } from '../app/course/course.component';
 import { Button } from '@storybook/angular/demo';
 import { withA11y } from '@storybook/addon-a11y';
+// import '../assets/styles/themes/theme-uol.css';
 
 export const actions = {
     goToClassroom: action('goToClassroom'),
     courseMaterials: action('courseMaterials'),
-};
+};y
 
 const label = 'Portal';
 const options = {
@@ -33,9 +34,8 @@ storiesOf('Course Card', module)
           courseCredits: text('courseCredits', '0'),
           portal: text('coursportaleCredits', '0'),
           // tslint:disable-next-line:max-line-length
-          // instructors: array('instructors', '[{'email': 'elder.godoy@dev.waldenu.edu', 'familyName': 'Godoy','givenName': 'Elder','identifier': 'USW1.A000999999.TEST','phone': null,'role': 'student','sms': null,'userId': 'elder.godoy@dev.waldenu.edu','username': 'elder.godoy@dev.waldenu.edu','__typename': 'teacher'}]'),
-          // tslint:disable-next-line:max-line-length
-          instructors: text('instructors', JSON.stringify([{'email': 'elder.godoy@dev.waldenu.edu', 'familyName': 'Godoy','givenName': 'Elder','identifier': 'USW1.A000999999.TEST','phone': null,'role': 'student','sms': null,'userId': 'elder.godoy@dev.waldenu.edu','username': 'elder.godoy@dev.waldenu.edu','__typename': 'teacher'}])),
+          instructors: JSON.stringify([{email: 'elder.godoy@dev.waldenu.edu', familyName: 'Godoy', givenName: 'Elder'}]),
+
           goToClassroom: actions.goToClassroom,
           courseMaterials: actions.courseMaterials,
         }

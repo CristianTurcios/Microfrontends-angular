@@ -1,0 +1,478 @@
+html.unified-portal body {
+    line-height: 20px;
+}
+
+.right {
+    float: right;
+}
+
+.nav-dropdown--disableLink{
+    background-color: #827d7d;
+}
+
+.sidebar-profile__menu li {
+    padding: 8px;
+}
+
+/*
+    HomePage
+*/
+
+.homepage .jumbotron {
+    background-image: url(../../assets/images/universities/walden/home.png);
+	background-position: 100% 100%;
+	background-size: cover;
+	min-height: 400px;
+}
+
+.homepage .content-info {
+    text-align: center;
+    margin-bottom: 60px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.homepage .university-button {
+    width: 15%;
+    margin-left: 45%;
+    margin-top: 40px;
+    border-radius: 30px;
+    background: transparent;
+    border: 2px solid #0085A3;
+    color: #0085A3;
+}
+
+.homepage .university-button:hover{
+    text-decoration: none;
+    background: #0085a3;
+    color: #fff;
+}
+
+.homepage .content-contact {
+    background-color: #5D4037;
+    color: #fff;
+    /* min-width: 100%; */
+    min-height: 50px;
+    padding: 14px 5px 14px 20px;
+    margin-bottom: 120px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.homepage .content-contact .content-contact--message {
+    float:left;
+    margin-right: 30px;
+}
+
+.homepage .content-contact .content-contact--telephone {
+    float:left;
+    background-color: #453F3F;
+    position: relative;
+    bottom: 5px;
+    width: 180px;
+    text-align: center;
+}
+
+.homepage .content-contact .content-contact--telephone i {
+    margin-right: 8px;
+}
+
+.homepage .content-contact .icon-wrapper{
+    border-radius: 100%;
+    background: white;
+    float: left;
+    margin-right: 10px;
+    line-height: 5px;
+}
+
+.homepage .content-contact .icon-wrapper i.icon-help-bold{
+    font-size: 19px;
+    color: #2d1b00;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    padding-left: inherit;
+}
+
+.homepage .content-contact p{
+    margin: auto;
+    line-height: 22px;
+}
+
+.homepage i {
+    font-size: 2rem;
+    line-height: 32px;
+    width: 30px;
+    height: 30px;
+    padding-left: 3px;
+}
+
+.homepage .content-social {
+    text-align: center;
+
+}
+
+.homepage .content-social hr {
+    font-size: 20px;
+    width: 80%;
+}
+
+.homepage .content-social .content-social--icons {
+    float: left;
+    margin-left: 10%;
+}
+
+.homepage .content-social .content-social--icons i {
+    color: #0085A3;
+}
+
+.homepage .content-social .content-social--trademark {
+    float: right;
+    margin-right: 10%;
+}
+
+/*FORMS*/
+
+.form-input {
+    width: 100%;
+    height: 45px;
+    margin: 10px 0;
+    padding: 0;
+    padding-left: 10px;
+    text-align: left;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid #DDDDDD;
+    -webkit-appearance: none;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    -webkit-transition-property: all;
+    transition-property: all;
+}
+/* END FORMS */
+
+@media screen and (max-width: 320px) {
+    .homepage .content-contact {
+        height: 80px;
+    }
+
+    .homepage .university-button {
+        width: 40%;
+        margin-left: 30%;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .homepage .university-button {
+        width: 30%;
+        margin-left: 36%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .homepage .university-button {
+        width: 36%;
+        margin-left: 30%;
+    }
+}
+
+.homepage .header{
+    padding: 15px 10%;
+    box-shadow: 0px 5px 20px #888888;
+    position: relative;
+}
+
+.homepage .header img {
+    width: 250px;
+}
+
+.homepage .header hr {
+    border-top: 3px solid #ED9A2D;
+}
+
+/* END HomePage */
+
+/*
+    JUMBOTRON
+*/
+
+.jumbotron .container {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px){
+    .container-fluid .jumbotron, .container .jumbotron {
+         padding-left: 60px;
+         padding-right: 60px;
+    }
+}
+.container-fluid .jumbotron, .container .jumbotron {
+    border-radius: 6px;
+     padding-left: 15px;
+     padding-right: 15px;
+}
+.jumbotron {
+     padding-top: 48px;
+     padding-bottom: 48px;
+}
+.jumbotron, .jumbotron .h1, .jumbotron h1 {
+    color: inherit;
+}
+.jumbotron {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin-bottom: 30px;
+    background-color: #eee;
+}
+
+/* END JUMBOTRON */
+
+.header-logo a img {
+    width: 75%;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+/*
+    Cards
+*/
+
+.card {
+    background-color: #ffffff;
+}
+
+@media only screen and (min-width: 1480px){
+    .board-with-sidebar.board-with-sidebar--profile {
+        min-height: 0px;
+    }
+}
+
+.card-short.card--course {
+    background-color: #fff;
+    -webkit-box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.07);
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    min-height: 260px;
+}
+
+.card-short.card--course .card-content {
+    padding-left: 20px;
+}
+
+.card--course hr {
+    border-color: #ED9A2D;
+    width: 42px;
+    border-width: 2px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.card--course .card-actions {
+    text-align: center;
+    margin-left: 20%;
+    width: 50%;
+}
+
+.card--course .card-actions a {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.card--no-content {
+    text-align: center;
+}
+
+.card--no-content .card-short {
+    width: 50%;
+}
+
+.card--no-content .icon {
+    font-size: 90px;
+}
+
+.link-bookstore{
+    margin-top: 25px;
+}
+
+/* END CARDS*/
+
+@media only screen and (max-width: 768px) {
+    .sidebar-profile__menu span {
+        display: none;
+    }
+
+    .sidebar-profile__menu li {
+        padding-left: 3%;
+        margin-right: 10px;
+    }
+
+    .sidebar-profile__menu {
+        text-align: center;
+    }
+}
+
+.board-dashboard {
+    padding-top: 10px;
+    background-color: #EEEFF1;
+}
+
+/*
+***************************
+---- University Styles ----
+***************************
+*/
+
+/*---- WALDEN ----*/
+
+#Walden a{
+    color: #AD844A;
+    text-decoration: none;
+}
+
+#Walden .button.university-button {
+    background-color: transparent;
+    color: #0085A3;
+}
+
+#Walden .homepage .university-button:hover{
+    text-decoration: none;
+    background: #0085a3;
+    color: #fff;
+}
+
+/* Header */
+
+#Walden .header-main--passport, #Walden nav{
+    background-color: #0085A3;
+}
+
+#Walden .header-main a{
+    color: #FFFFFF;
+}
+
+#Walden .nav-dropdown.is-open ul{
+    background-color: #453F3F;
+}
+
+.nav-dropdown--resources{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+.nav-dropdown.nav-dropdown--resources ul{
+    position: absolute;
+    right: 0;
+    z-index: 999;
+    top: 34px;
+    color: black;
+    border: 1px solid transparent;
+}
+#Walden .nav-dropdown.nav-dropdown--resources.is-open ul{
+    background-color: white;
+}
+
+/*Side Bar*/
+#Walden .sidebar-profile{
+    background-color: #453F3F;
+}
+
+#Walden .board-with-sidebar.board-with-sidebar--profile{
+    background-color: #453F3F;
+}
+
+#Walden .sidebar-profile__menu li{
+    background-color: rgba(0,0,0,.4);
+}
+
+#Walden .sidebar-profile__profilepic{
+    border: 5px solid #ED9A2D;
+    -webkit-box-shadow: 0 0 1px 0px #ED9A2D inset, 0 0 1px 0px #ED9A2D;
+    box-shadow: 0 0 1px 0px #ED9A2D inset, 0 0 1px 0px #ED9A2D;
+}
+
+#Walden .sidebar-profile__profilepic-upload .upload-pic--manual{
+    color: #FFCB83;
+}
+
+#Walden .sidebar-profile__profilepic-upload .upload-pic--manual:hover{
+    background-color: #AD844A;
+}
+
+#Walden .button-camera, .button-add-connection{
+    background-color: #ED9A2D;
+}
+
+#Walden .sidebar-profile__privacy--change__options i{
+    background-color: #ED9A2D;
+}
+
+#Walden .sidebar-profile__progress-details__content{
+    background-color: #453F3F;
+}
+
+#Walden .sidebar-profile__menu li a.selected{
+    color: #FFCB83;
+}
+
+#Walden .sidebar-profile__menu li a{
+    color: #AD844A;
+}
+
+#Walden .sidebar-profile__progress-details__checklist li:after{
+    background-color: #FFCB83;
+}
+
+/* Experience */
+#Walden .button-picker--date{
+    background-color: #7EBFDB;
+}
+
+#Walden .button.button-summary-edit_save {
+    color: #FFFFFF;
+    background-color: #7EBFDB;
+}
+
+#Walden .button.button-summary-edit_cancel {
+    color: #666666;
+    background-color: #EFEFEF;
+}
+
+#Walden .sidebar-profile__progress-details__description{
+    color: #AD844A;
+}
+
+/* Privacy Modal */
+#Walden .toggle-switch__stat--off{
+    background-color: #AD844A;
+}
+
+#Walden .toggle-switch input[type="checkbox"]:not(:checked) + label ~ .toggle-switch__toggle i{
+    color: #ED9A2D;
+}
+
+#Walden .toggle-switch input[type="checkbox"]:not(:checked) ~ .toggle-outtext--right{
+    color: #ED9A2D;
+}
+
+#Walden .button{
+    color: #FFFFFF;
+    background-color: #AD844A;
+}
+
+#Walden .button.button-privacy-change__cancel{
+    background-color: #333333;
+}
+
+#Walden .button.button-go-to-class {
+    background-color: #ED9A2D;
+}
+#Walden .button.button-go-to-class.disabled{
+    background-color: #C5C5C5;
+}
+
+#Walden .skype-chat .button.skype-chat--close {
+    background-color: transparent;
+    color: #ED9A2D;
+}
